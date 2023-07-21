@@ -21,7 +21,6 @@ body {
 
 .top-section {
     position: relative;
-    /* Added */
     top: 0;
     left: 0;
     width: 100%;
@@ -31,8 +30,6 @@ body {
     align-items: center;
     justify-content: space-between;
     padding-left: 10px;
-    /* Adjust as needed */
-
 }
 
 .main-section {
@@ -51,42 +48,43 @@ body {
 }
 
 .main-section .section1 {
-    flex-grow: 580;
+    flex-grow: 639;
+    flex-basis: 64%;
     background: #652f01 url("img/main_bg.png");
     background-size: 100% 100%;
     position: relative;
 }
 
 .main-section .section2 {
-    flex-grow: 290;
+    flex-grow: 210;
+    flex-basis: 21%;
     display: flex;
     flex-direction: column;
 }
 
 .main-section .section2 .part1 {
-    flex-grow: 50;
+    flex-grow: 46;
     background: url("img/section2-part1.png");
     background-size: 100% 100%;
     position: relative;
 }
 
 .main-section .section2 .part2 {
-    flex-grow: 50;
+    flex-grow: 75;
     background: url("img/section2-part2.png");
     background-size: 100% 100%;
     position: relative;
 }
 
 .main-section .section2 .part3 {
-    flex-grow: 260;
+    flex-grow: 358;
     background: url("img/section2-part3.png");
     background-size: 100% 100%;
     position: relative;
 }
 
-
 .part4 {
-    flex-grow: 410;
+    flex-grow: 520;
     background: url("img/section2-part4.png");
     background-size: 100% 100%;
     position: relative;
@@ -94,12 +92,11 @@ body {
     justify-content: center;
     align-items: center;
     padding: 0px;
-    /* add some padding */
 }
 
-
 .main-section .section3 {
-    flex-grow: 330;
+    flex-grow: 151;
+    flex-basis: 15%;
     background: url("img/section3_bg.png");
     background-size: 140% 100%;
 }
@@ -113,7 +110,6 @@ body {
     background: url("img/section1_display.png");
     border-radius: 20px;
     background-size: 100% 100%;
-
 }
 
 .bottom-div {
@@ -185,10 +181,7 @@ body {
     gap: 20px;
     color: white;
     margin-left: 10px;
-    /* Adjust as needed */
-
 }
-
 
 .button {
     position: absolute;
@@ -207,13 +200,10 @@ body {
 .menu-button {
     position: absolute;
     right: 10px;
-    /* Adjust as needed */
     top: 50%;
     transform: translateY(-50%);
     width: 30px;
-    /* Adjust as needed */
     height: 30px;
-    /* Adjust as needed */
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -254,14 +244,12 @@ body {
     height: auto;
     max-height: 98%;
     object-fit: contain;
-    transition: transform 0.13s ease-in-out, border 0.3s ease-in-out; /* Added */
-    /* added */
-    border-radius: 30px; /* Adjust as needed */
+    transition: transform 0.13s ease-in-out, border 0.3s ease-in-out;
+    border-radius: 30px;
 }
 
 .frame-part img:hover {
     transform: scale(1.1);
-    /* added */
 }
 
 .part3 {
@@ -272,7 +260,6 @@ body {
 }
 
 .frame-name {
-
     text-align: center;
     display: flex;
     justify-content: center;
@@ -282,7 +269,6 @@ body {
     margin: auto;
     color: white;
     position: relative;
-
 }
 
 .frame-name span {
@@ -296,16 +282,13 @@ body {
     }
 }
 
-
 .card-details {
     display: none;
     position: absolute;
     bottom: 0;
     left: 0;
     font-size: 0.8em;
-    /* adjust as needed */
     color: white;
-    /* adjust as needed */
 }
 
 .frame-part:hover .card-details {
@@ -315,15 +298,11 @@ body {
 #prev-button,
 #next-button {
     width: 20px;
-    /* adjust width as desired */
     height: 20px;
-    /* adjust height as desired */
     position: relative;
     bottom: -80%;
-    /* adjust to move buttons up or down */
     border-style: solid;
     border-width: 10px;
-    /* adjust as needed */
     border-color: transparent;
     background-color: transparent;
     border-radius: 0;
@@ -332,15 +311,11 @@ body {
 #prev-button {
     border-right-color: white;
     left: -10%;
-    /* adjust to move button to the left */
-    /* triangle pointing left */
 }
 
 #next-button {
     border-left-color: white;
     right: -10%;
-    /* adjust to move button to the right */
-    /* triangle pointing right */
 }
 
 .button-grid {
@@ -348,10 +323,8 @@ body {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     gap: 4px;
-    /* adjust the gap as needed */
     width: 80%;
     height: 60%;
-    /* adjust this value as needed */
     align-items: center;
     justify-content: center;
 }
