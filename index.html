@@ -9,351 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tektur&display=swap" rel="stylesheet">
-
-
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: white;
-            font-family: 'Tektur', cursive;
-        }
-
-        .container {
-            position: relative;
-            width: 100vw;
-            height: 100vh;
-        }
-
-        .top-section {
-            position: relative;
-            /* Added */
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 52px;
-            background: #181E2F;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding-left: 10px;
-            /* Adjust as needed */
-
-        }
-
-        .main-section {
-            position: absolute;
-            left: 0;
-            width: 100%;
-            height: calc(100% - 52px);
-            display: flex;
-            background-image: url('imgs/Rectangle1.jpg');
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-        }
-
-        .main-section .section {
-            height: 100%;
-        }
-
-        .main-section .section1 {
-            flex-grow: 580;
-            background: #652f01 url("img/main_bg.png");
-            background-size: 100% 100%;
-            position: relative;
-        }
-
-        .main-section .section2 {
-            flex-grow: 360;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .main-section .section2 .part1 {
-            flex-grow: 50;
-            background: url("img/section2-part1.png");
-            background-size: 100% 100%;
-            position: relative;
-        }
-
-        .main-section .section2 .part2 {
-            flex-grow: 50;
-            background: url("img/section2-part2.png");
-            background-size: 100% 100%;
-            position: relative;
-        }
-
-        .main-section .section2 .part3 {
-            flex-grow: 260;
-            background: url("img/section2-part3.png");
-            background-size: 100% 100%;
-            position: relative;
-        }
-
-        .main-section .section2 .part4 {
-            flex-grow: 410;
-            background: url("img/section2-part4.png");
-            background-size: 100% 100%;
-            position: relative;
-        }
-
-        .main-section .section3 {
-            flex-grow: 330;
-            background: url("img/section3_bg.png");
-            background-size: 140% 100%;
-        }
-
-        .inner-div {
-            position: relative;
-            top: 9%;
-            left: 7%;
-            width: 86%;
-            height: 61.92%;
-            background: url("img/section1_display.png");
-            border-radius: 20px;
-            background-size: 100% 100%;
-
-        }
-
-
-
-
-        .bottom-div {
-            position: absolute;
-            bottom: 5.5%;
-            left: 7%;
-            width: 86%;
-            height: 20%;
-            background: #000000;
-            display: flex;
-            overflow-x: auto;
-            scrollbar-width: none;
-            border-radius: 8px;
-        }
-
-        .bottom-div::-webkit-scrollbar {
-            display: none;
-        }
-
-        .nav-item {
-            width: 90px;
-            height: 90px;
-            border: 3px dashed rgb(239, 64, 0);
-            background: black;
-            position: relative;
-            margin: auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-            border-radius: 7%;
-        }
-
-        .nav-item::before,
-        .nav-item::after {
-            content: '';
-            position: absolute;
-            background: white;
-        }
-
-        .nav-item::before {
-            height: 6px;
-            width: 40%;
-        }
-
-        .nav-item::after {
-            width: 6px;
-            height: 40%;
-        }
-
-        .nav-item:hover::before,
-        .nav-item:hover::after {
-            background-color: #e56531;
-        }
-
-        .nav-item:hover {
-            border: 12px solid #e56531;
-            background-color: #e56531;
-        }
-
-        .section2 {
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
-            z-index: 1;
-        }
-
-        #account {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            color: white;
-            margin-left: 10px;
-            /* Adjust as needed */
-
-        }
-
-
-        .button {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-
-        #sign-in-button {
-            right: 140px;
-        }
-
-        #sign-out-button {
-            right: 50px;
-        }
-
-        .menu-button {
-            position: absolute;
-            right: 10px;
-            /* Adjust as needed */
-            top: 50%;
-            transform: translateY(-50%);
-            width: 30px;
-            /* Adjust as needed */
-            height: 30px;
-            /* Adjust as needed */
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            cursor: pointer;
-        }
-
-        .menu-button div {
-            width: 100%;
-            height: 4px;
-            background: white;
-        }
-
-        .frame-container {
-            height: 100%;
-            width: 80%;
-        }
-
-        .frame {
-
-            position: absolute;
-            top: 0;
-            left: 0;
-
-            display: none;
-            flex-direction: row;
-            height: 100%;
-        }
-
-        .frame.active {
-            display: flex;
-        }
-
-        .frame-part {
-            flex: 1;
-            position: relative;
-        }
-
-        .frame-part img {
-            width: 95%;
-            height: auto;
-            max-height: 98%;
-            object-fit: contain;
-            transition: transform 0.13s ease-in-out;
-            /* added */
-        }
-
-        .frame-part img:hover {
-            transform: scale(1.1);
-            /* added */
-        }
-
-        .part3 {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
-
-        .frame-name {
-
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 75%;
-            height: 75%;
-            margin: auto;
-            color: white;
-            position: relative;
-
-        }
-
-        .frame-name span {
-            opacity: 0;
-            animation: appear 0.3s forwards;
-        }
-
-        @keyframes appear {
-            to {
-                opacity: 1;
-            }
-        }
-
-
-        .card-details {
-            display: none;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            font-size: 0.8em;
-            /* adjust as needed */
-            color: white;
-            /* adjust as needed */
-        }
-
-        .frame-part:hover .card-details {
-            display: block;
-        }
-
-        #prev-button,
-        #next-button {
-            width: 20px;
-            /* adjust width as desired */
-            height: 20px;
-            /* adjust height as desired */
-            position: relative;
-            bottom: -80%;
-            /* adjust to move buttons up or down */
-            border-style: solid;
-            border-width: 10px;
-            /* adjust as needed */
-            border-color: transparent;
-            background-color: transparent;
-            border-radius: 0;
-        }
-
-        #prev-button {
-            border-right-color: white;
-            left: -10%;
-            /* adjust to move button to the left */
-            /* triangle pointing left */
-        }
-
-        #next-button {
-            border-left-color: white;
-            right: -10%;
-            /* adjust to move button to the right */
-            /* triangle pointing right */
-        }
-    </style>
+    <link href="styles.css" rel="stylesheet">
+</head>
+    
 </head>
 
 <body>
@@ -398,30 +56,32 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="frame" id="frame2"><div class="frame-part">
-                            <img src="ships/1.png" alt="Ship 1">
-                            <div class="card-details">
-                                <p class="card-name">Name: ShipName</p>
-                                <p class="card-profession">Type: ShipType</p>
-                                <p class="card-description">Description: ShipDescriptionText</p>
+                        <div class="frame" id="frame2">
+                            <div class="frame-part">
+                                <img src="ships/1.png" alt="Ship 1">
+                                <div class="card-details">
+                                    <p class="card-name">Name: ShipName</p>
+                                    <p class="card-profession">Type: ShipType</p>
+                                    <p class="card-description">Description: ShipDescriptionText</p>
+                                </div>
+                            </div>
+                            <div class="frame-part">
+                                <img src="ships/2.png" alt="Ship 2">
+                                <div class="card-details">
+                                    <p class="card-name">Name: ShipName</p>
+                                    <p class="card-profession">Type: ShipType</p>
+                                    <p class="card-description">Description: ShipDescriptionText</p>
+                                </div>
+                            </div>
+                            <div class="frame-part">
+                                <img src="ships/3.png" alt="Ship 3">
+                                <div class="card-details">
+                                    <p class="card-name">Name: ShipName</p>
+                                    <p class="card-profession">Type: ShipType</p>
+                                    <p class="card-description">Description: ShipDescriptionText</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="frame-part">
-                            <img src="ships/2.png" alt="Ship 2">
-                            <div class="card-details">
-                                <p class="card-name">Name: ShipName</p>
-                                <p class="card-profession">Type: ShipType</p>
-                                <p class="card-description">Description: ShipDescriptionText</p>
-                            </div>
-                        </div>
-                        <div class="frame-part">
-                            <img src="ships/3.png" alt="Ship 3">
-                            <div class="card-details">
-                                <p class="card-name">Name: ShipName</p>
-                                <p class="card-profession">Type: ShipType</p>
-                                <p class="card-description">Description: ShipDescriptionText</p>
-                            </div>
-                        </div></div>
                         <!-- Add more frames as needed -->
                     </div>
                     <div id="mint">
@@ -456,7 +116,19 @@
                         <button id="next-button"></button>
                     </div>
                 </div>
-                <div class="part4"></div>
+                <div class="part4">
+                    <div class="button-grid">
+                        <div class="button-cell"><img src="buttons/1.png" alt="Button 1" /></div>
+                        <div class="button-cell"><img src="buttons/2.png" alt="Button 2" /></div>
+                        <div class="button-cell"><img src="buttons/3.png" alt="Button 3" /></div>
+                        <div class="button-cell"><img src="buttons/4.png" alt="Button 4" /></div>
+                        <div class="button-cell"><img src="buttons/5.png" alt="Button 5" /></div>
+                        <div class="button-cell"><img src="buttons/6.png" alt="Button 6" /></div>
+                        <div class="button-cell"><img src="buttons/7.png" alt="Button 7" /></div>
+                        <div class="button-cell"><img src="buttons/8.png" alt="Button 8" /></div>
+                        <div class="button-cell"><img src="buttons/9.png" alt="Button 9" /></div>
+                    </div>
+                </div>
             </div>
             <div class="section section3"></div>
         </div>
@@ -464,56 +136,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/near-api-js@0.45.1/dist/near-api-js.min.js"></script>
     <script src="./index.js" type="module"></script>
-    <script>let currentFrame = 0;
-        const frames = document.querySelectorAll('.frame');
-        const frameNames = ['Choose your Crew', 'Choose your Ship', 'Third Frame']; // Add more names as needed
-        const cardDetailsElement = document.getElementById('card-details');
-
-        function updateFrames() {
-            frames.forEach((frame, index) => {
-                if (index === currentFrame) {
-                    frame.classList.add('active');
-                    const frameNameElement = document.getElementById('frame-name');
-                    frameNameElement.innerHTML = '';
-                    const frameName = frameNames[index];
-                    for (let i = 0; i < frameName.length; i++) {
-                        const letter = document.createElement('span');
-                        letter.textContent = frameName[i];
-                        letter.style.animationDelay = `${i * 0.1}s`;
-                        frameNameElement.appendChild(letter);
-                    }
-                } else {
-                    frame.classList.remove('active');
-                }
-            });
-        }
-
-        frames.forEach((frame) => {
-            const frameParts = frame.querySelectorAll('.frame-part');
-            frameParts.forEach((framePart) => {
-                framePart.addEventListener('mouseover', () => {
-                    const cardDetails = framePart.querySelector('.card-details').innerHTML;
-                    cardDetailsElement.innerHTML = cardDetails;
-                });
-                framePart.addEventListener('mouseout', () => {
-                    cardDetailsElement.innerHTML = '';
-                });
-            });
-        });
-
-        document.getElementById('prev-button').addEventListener('click', () => {
-            currentFrame = Math.max(0, currentFrame - 1);
-            updateFrames();
-        });
-
-        document.getElementById('next-button').addEventListener('click', () => {
-            currentFrame = Math.min(frames.length - 1, currentFrame + 1);
-            updateFrames();
-        });
-
-        updateFrames();  // Initialize
-
-    </script>
+    <script src="./script.js"></script>
 
 </body>
 

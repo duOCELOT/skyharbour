@@ -1,0 +1,373 @@
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: white;
+            font-family: 'Tektur', cursive;
+        }
+
+        .container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .top-section {
+            position: relative;
+            /* Added */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 52px;
+            background: #181E2F;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-left: 10px;
+            /* Adjust as needed */
+
+        }
+
+        .main-section {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: calc(100% - 52px);
+            display: flex;
+            background-image: url('imgs/Rectangle1.jpg');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }
+
+        .main-section .section {
+            height: 100%;
+        }
+
+        .main-section .section1 {
+            flex-grow: 580;
+            background: #652f01 url("img/main_bg.png");
+            background-size: 100% 100%;
+            position: relative;
+        }
+
+        .main-section .section2 {
+            flex-grow: 290;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main-section .section2 .part1 {
+            flex-grow: 50;
+            background: url("img/section2-part1.png");
+            background-size: 100% 100%;
+            position: relative;
+        }
+
+        .main-section .section2 .part2 {
+            flex-grow: 50;
+            background: url("img/section2-part2.png");
+            background-size: 100% 100%;
+            position: relative;
+        }
+
+        .main-section .section2 .part3 {
+            flex-grow: 260;
+            background: url("img/section2-part3.png");
+            background-size: 100% 100%;
+            position: relative;
+        }
+
+
+        .part4 {
+            flex-grow: 410;
+            background: url("img/section2-part4.png");
+            background-size: 100% 100%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0px;
+            /* add some padding */
+        }
+
+
+        .main-section .section3 {
+            flex-grow: 330;
+            background: url("img/section3_bg.png");
+            background-size: 140% 100%;
+        }
+
+        .inner-div {
+            position: relative;
+            top: 9%;
+            left: 7%;
+            width: 86%;
+            height: 61.92%;
+            background: url("img/section1_display.png");
+            border-radius: 20px;
+            background-size: 100% 100%;
+
+        }
+
+
+
+
+        .bottom-div {
+            position: absolute;
+            bottom: 5.5%;
+            left: 7%;
+            width: 86%;
+            height: 20%;
+            background: #000000;
+            display: flex;
+            overflow-x: auto;
+            scrollbar-width: none;
+            border-radius: 8px;
+        }
+
+        .bottom-div::-webkit-scrollbar {
+            display: none;
+        }
+
+        .nav-item {
+            width: 90px;
+            height: 90px;
+            border: 3px dashed rgb(239, 64, 0);
+            background: black;
+            position: relative;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            border-radius: 7%;
+        }
+
+        .nav-item::before,
+        .nav-item::after {
+            content: '';
+            position: absolute;
+            background: white;
+        }
+
+        .nav-item::before {
+            height: 6px;
+            width: 40%;
+        }
+
+        .nav-item::after {
+            width: 6px;
+            height: 40%;
+        }
+
+        .nav-item:hover::before,
+        .nav-item:hover::after {
+            background-color: #e56531;
+        }
+
+        .nav-item:hover {
+            border: 12px solid #e56531;
+            background-color: #e56531;
+        }
+
+        .section2 {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+            z-index: 1;
+        }
+
+        #account {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            color: white;
+            margin-left: 10px;
+            /* Adjust as needed */
+
+        }
+
+
+        .button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        #sign-in-button {
+            right: 140px;
+        }
+
+        #sign-out-button {
+            right: 50px;
+        }
+
+        .menu-button {
+            position: absolute;
+            right: 10px;
+            /* Adjust as needed */
+            top: 50%;
+            transform: translateY(-50%);
+            width: 30px;
+            /* Adjust as needed */
+            height: 30px;
+            /* Adjust as needed */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            cursor: pointer;
+        }
+
+        .menu-button div {
+            width: 100%;
+            height: 4px;
+            background: white;
+        }
+
+        .frame-container {
+            height: 100%;
+            width: 80%;
+        }
+
+        .frame {
+
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            display: none;
+            flex-direction: row;
+            height: 100%;
+        }
+
+        .frame.active {
+            display: flex;
+        }
+
+        .frame-part {
+            flex: 1;
+            position: relative;
+        }
+
+        .frame-part img {
+            width: 95%;
+            height: auto;
+            max-height: 98%;
+            object-fit: contain;
+            transition: transform 0.13s ease-in-out;
+            /* added */
+        }
+
+        .frame-part img:hover {
+            transform: scale(1.1);
+            /* added */
+        }
+
+        .part3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .frame-name {
+
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 75%;
+            height: 75%;
+            margin: auto;
+            color: white;
+            position: relative;
+
+        }
+
+        .frame-name span {
+            opacity: 0;
+            animation: appear 0.3s forwards;
+        }
+
+        @keyframes appear {
+            to {
+                opacity: 1;
+            }
+        }
+
+
+        .card-details {
+            display: none;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            font-size: 0.8em;
+            /* adjust as needed */
+            color: white;
+            /* adjust as needed */
+        }
+
+        .frame-part:hover .card-details {
+            display: block;
+        }
+
+        #prev-button,
+        #next-button {
+            width: 20px;
+            /* adjust width as desired */
+            height: 20px;
+            /* adjust height as desired */
+            position: relative;
+            bottom: -80%;
+            /* adjust to move buttons up or down */
+            border-style: solid;
+            border-width: 10px;
+            /* adjust as needed */
+            border-color: transparent;
+            background-color: transparent;
+            border-radius: 0;
+        }
+
+        #prev-button {
+            border-right-color: white;
+            left: -10%;
+            /* adjust to move button to the left */
+            /* triangle pointing left */
+        }
+
+        #next-button {
+            border-left-color: white;
+            right: -10%;
+            /* adjust to move button to the right */
+            /* triangle pointing right */
+        }
+
+        .button-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 4px;
+            /* adjust the gap as needed */
+            width: 80%;
+            height: 60%;
+            /* adjust this value as needed */
+            align-items: center;
+            justify-content: center;
+        }
+
+        .button-cell {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .button-cell img {
+            max-width: 70%;
+            max-height: 70%;
+            object-fit: contain;
+        }
