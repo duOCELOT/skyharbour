@@ -25,12 +25,15 @@ function updateFrames() {
 frames.forEach((frame) => {
     const frameParts = frame.querySelectorAll('.frame-part');
     frameParts.forEach((framePart) => {
+        const cardImg = framePart.querySelector('img');
         framePart.addEventListener('mouseover', () => {
             const cardDetails = framePart.querySelector('.card-details').innerHTML;
             cardDetailsElement.innerHTML = cardDetails;
+            cardImg.style.border = "5px solid orange";
         });
         framePart.addEventListener('mouseout', () => {
             cardDetailsElement.innerHTML = '';
+            cardImg.style.border = "none";
         });
     });
 });
