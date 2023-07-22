@@ -64,6 +64,7 @@ body {
 
 .main-section .section2 .part1 {
     flex-grow: 46;
+    flex-basis: 4%;
     background: url("img/section2-part1.png");
     background-size: 100% 100%;
     position: relative;
@@ -71,6 +72,7 @@ body {
 
 .main-section .section2 .part2 {
     flex-grow: 75;
+    flex-basis: 7%;
     background: url("img/section2-part2.png");
     background-size: 100% 100%;
     position: relative;
@@ -78,13 +80,14 @@ body {
 
 .main-section .section2 .part3 {
     flex-grow: 358;
+    flex-basis: 33%;
     background: url("img/section2-part3.png");
     background-size: 100% 100%;
     position: relative;
 }
 
-.part4 {
-    flex-grow: 520;
+.main-section .section2 .part4 {
+    flex-grow: 450;
     background: url("img/section2-part4.png");
     background-size: 100% 100%;
     position: relative;
@@ -219,6 +222,8 @@ body {
 .frame-container {
     height: 100%;
     width: 80%;
+    align-items: center;
+    justify-content: center;
 }
 
 .frame {
@@ -322,11 +327,11 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    gap: 4px;
-    width: 80%;
-    height: 60%;
+    gap: 0px; /* No gap */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
     align-items: center;
-    justify-content: center;
+    justify-items: center; /* Center items horizontally in their cells */
 }
 
 .button-cell {
@@ -336,7 +341,22 @@ body {
 }
 
 .button-cell img {
-    max-width: 70%;
-    max-height: 70%;
+    max-width: 80%;
+    max-height: 80%;
     object-fit: contain;
+    border-radius: 10px;
+    border: #000000 1px solid;
+}
+
+/* Add specific styles for new frames if needed */
+#frame3 {border: #000000 1px solid;
+    /* add your specific styles here */
+}
+
+#frame4 {border: #000000 1px solid;
+    /* add your specific styles here */
+}
+
+#frame5 {border: #000000 1px solid;
+    /* add your specific styles here */
 }

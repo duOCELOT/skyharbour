@@ -1,7 +1,6 @@
 let currentFrame = 0;
 const frames = document.querySelectorAll('.frame');
-const frameNames = ['Choose your Crew', 'Choose your Ship', 'Third Frame']; // Add more names as needed
-const cardDetailsElement = document.getElementById('card-details');
+const frameNames = ['Choose your Crew', 'Choose your Ship', 'Third Frame', 'Forth Frame', 'Fith Frame']; // Add more names as needed
 
 function updateFrames() {
     frames.forEach((frame, index) => {
@@ -27,12 +26,9 @@ frames.forEach((frame) => {
     frameParts.forEach((framePart) => {
         const cardImg = framePart.querySelector('img');
         framePart.addEventListener('mouseover', () => {
-            const cardDetails = framePart.querySelector('.card-details').innerHTML;
-            cardDetailsElement.innerHTML = cardDetails;
             cardImg.style.border = "5px solid orange";
         });
         framePart.addEventListener('mouseout', () => {
-            cardDetailsElement.innerHTML = '';
             cardImg.style.border = "none";
         });
     });
