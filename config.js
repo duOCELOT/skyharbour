@@ -1,5 +1,5 @@
 const {keyStores} = nearApi;
-const CONTRACT_NAME = "nft-frontend-simple-mint.blockhead.testnet";
+const CONTRACT_NAME = "crew.skyharbour.testnet";
 
 export function getConfig(network) {
     switch (network) {
