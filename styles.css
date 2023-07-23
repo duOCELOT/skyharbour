@@ -512,3 +512,11 @@
         background: #555;
         /* Scrollbar color on hover */
     }
+
+    .item_button {
+        color: #f1f1f1;    
+        font: 600 0.7em 'Tektur' , cursive;
+        display: flex; /* Add this */
+        justify-content: center; /* Horizontally center text */
+        align-items: top; /* Vertically center text */
+    }
