@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    border: 0px solid rgb(255, 255, 255);
 }
 
 body {
@@ -110,9 +111,11 @@ body {
     left: 7%;
     width: 86%;
     height: 61.92%;
-    background: url("img/section1_display.png");
-    border-radius: 20px;
+    background: url("img/section1_display2.png");
     background-size: 100% 100%;
+    align-items: center;
+    justify-content: center;
+    border: #e53131 0px solid;
 }
 
 .bottom-div {
@@ -220,10 +223,13 @@ body {
 }
 
 .frame-container {
-    height: 100%;
-    width: 80%;
+    height: 70%;
+    width: 87%;
+    margin: 50px 0px 0px 50px ;
     align-items: center;
     justify-content: center;
+    border: #ffc400 0px solid;
+    position: relative;
 }
 
 .frame {
@@ -233,6 +239,10 @@ body {
     display: none;
     flex-direction: row;
     height: 100%;
+    align-items: center;
+    justify-content: center;
+    border: #31e5d0 0px solid;
+
 }
 
 .frame.active {
@@ -242,19 +252,22 @@ body {
 .frame-part {
     flex: 1;
     position: relative;
+    align-items: center;
+    justify-content: center;
+    border: #e56531 0px solid;
 }
 
 .frame-part img {
-    width: 95%;
+    width: 70%;
     height: auto;
-    max-height: 98%;
+    max-height: 70%;
     object-fit: contain;
-    transition: transform 0.13s ease-in-out, border 0.3s ease-in-out;
+    transition: transform 0.2s ease-in-out, border 0.1s ease-in-out;
     border-radius: 30px;
 }
 
 .frame-part img:hover {
-    transform: scale(1.1);
+    transform: scale(1.07);
 }
 
 .part3 {
@@ -345,7 +358,7 @@ body {
     max-height: 80%;
     object-fit: contain;
     border-radius: 10px;
-    border: #000000 1px solid;
+    border: #000000 0px solid;
 }
 
 /* Add specific styles for new frames if needed */
