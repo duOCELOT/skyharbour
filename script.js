@@ -1,6 +1,6 @@
 let currentFrame = 0;
 const frames = document.querySelectorAll('.frame');
-const frameNames = ['Choose your Crew', 'Choose your Ship', 'Third Frame', 'Forth Frame', 'Fith Frame']; // Add more names as needed
+const frameNames = ['Your Profile','Lore','Choose_yourCrew', 'Choose your Ship', 'Forth Frame', 'Fith Frame']; // Add more names as needed
 
 function updateFrames() {
     frames.forEach((frame, index) => {
