@@ -428,8 +428,12 @@
     }
 
     .mint {
-        background: white;
-        padding: 20px;
+        background: white url("img/paper.png") no-repeat center center;
+        /* Update the path to your image */
+        background-repeat: repeat-y;
+        background-position: top;
+        background-size: 100%; /* This will stretch the image to cover the entire width of the element */
+      padding: 20px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -455,7 +459,7 @@
     .mint button {
         font-family: 'Tektur', cursive;
         color: black;
-        background: white;
+        background: rgba(255, 255, 255, 0);
         border: none;
         padding: 10px 20px;
         cursor: pointer;
