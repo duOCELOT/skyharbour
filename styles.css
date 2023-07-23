@@ -1,488 +1,510 @@
-* {
-    box-sizing: border-box;
-    border: 0px solid rgb(255, 255, 255);
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: white;
-    font-family: 'Tektur', cursive;
-}
-
-.container {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-}
-
-.top-section {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 52px;
-    background: #181E2F;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-left: 10px;
-}
-
-.main-section {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: calc(100% - 52px);
-    display: flex;
-    background-image: url('imgs/Rectangle1.jpg');
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-}
-
-.main-section .section {
-    height: 100%;
-}
-
-.main-section .section1 {
-    flex-grow: 639;
-    flex-basis: 64%;
-    background: #652f01 url("img/main_bg.png");
-    background-size: 100% 100%;
-    position: relative;
-}
-
-.main-section .section2 {
-    flex-grow: 210;
-    flex-basis: 21%;
-    display: flex;
-    flex-direction: column;
-}
-
-.main-section .section2 .part1 {
-    flex-grow: 46;
-    flex-basis: 4%;
-    background: url("img/section2-part1.png");
-    background-size: 100% 100%;
-    position: relative;
-}
-
-.main-section .section2 .part2 {
-    flex-grow: 75;
-    flex-basis: 7%;
-    background: url("img/section2-part2.png");
-    background-size: 100% 100%;
-    position: relative;
-}
-
-.main-section .section2 .part3 {
-    flex-grow: 358;
-    flex-basis: 33%;
-    background: url("img/section2-part3.png");
-    background-size: 100% 100%;
-    position: relative;
-}
-
-.main-section .section2 .part4 {
-    flex-grow: 450;
-    background: url("img/section2-part4.png");
-    background-size: 100% 100%;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0px;
-}
-
-.main-section .section3 {
-    flex-grow: 151;
-    flex-basis: 15%;
-    background: url("img/section3_bg.png");
-    background-size: 140% 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.inner-div {
-    position: relative;
-    top: 9%;
-    left: 7%;
-    width: 86%;
-    height: 61.92%;
-    background: url("img/section1_display2.png");
-    background-size: 100% 100%;
-    align-items: center;
-    justify-content: center;
-    border: #e53131 0px solid;
-}
-
-.bottom-div {
-    position: absolute;
-    bottom: 5.5%;
-    left: 7%;
-    width: 86%;
-    height: 20%;
-    background: #000000;
-    display: flex;
-    overflow-x: auto;
-    scrollbar-width: none;
-    border-radius: 8px;
-    /* Add the following line */
-    align-items: center;
-}
-
-
-
-.bottom-div::-webkit-scrollbar {
-    width: 5px; /* Adjust width of scrollbar */
-}
-
-.bottom-div::-webkit-scrollbar-track {
-    background: transparent; /* Remove scrollbar track background */
-}
-
-.bottom-div::-webkit-scrollbar-thumb {
-    background: #d55901; /* Scrollbar color (orange) */
-    border-radius: 50px; /* Round corners on scrollbar */
-}
-
-.bottom-div::-webkit-scrollbar-thumb:hover {
-    background: #FF4500; /* Darken the scrollbar color on hover */
-}
-
-
-.nav-item {
-    width: 70px;
-    height: 70px;
-    border: 3px dashed rgb(239, 64, 0);
-    background: black;
-    position: relative;
-    /* Update these lines */
-    margin: 0 10px; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-    border-radius: 7%;
-}
-
-.nav-item::before,
-.nav-item::after {
-    content: '';
-    position: absolute;
-    background: white;
-}
-
-.nav-item::before {
-    height: 6px;
-    width: 40%;
-}
-
-.nav-item::after {
-    width: 6px;
-    height: 40%;
-}
-
-.nav-item:hover::before,
-.nav-item:hover::after {
-    background-color: #e56531;
-}
-
-.nav-item:hover {
-    border: 12px solid #e56531;
-    background-color: #e56531;
-}
-
-.section2 {
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
-    z-index: 1;
-}
-
-#account {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    color: white;
-    margin-left: 10px;
-}
-
-.button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-#sign-in-button {
-    right: 140px;
-}
-
-#sign-out-button {
-    right: 50px;
-}
-
-.menu-button {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 30px;
-    height: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    cursor: pointer;
-}
-
-.menu-button div {
-    width: 100%;
-    height: 4px;
-    background: white;
-}
-
-.frame-container {
-    height: 70%;
-    width: 85%;
-    margin: 50px 0px 0px 53px ;
-    top: 54px;
-    left: 13px;
-    align-items: center;
-    justify-content: center;
-    border: #ffc400 0px solid;
-    position: relative;
-    display: flex;  /* Use flexbox layout */
-    flex-wrap: nowrap;  /* Prevent the frames from wrapping */
-    overflow-y: auto;  /* Make the container scrollable */
-    scrollbar-width: thin;  /* Make the scrollbar thinner (this property might not work in all browsers) */
-
-}
-
-.frame {
-    position: absolute;
-    top: 30;
-    left: 0;
-    display: none;
-    flex-direction: row;
-    height: 100%;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    border: #31e5d0 0px solid;
-}
-
-.frame.active {
-    display: flex;
-}
-
-.frame-part {
-    flex: 1;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    border: #e56531 0px solid;
-    height: 100%;
-    margin-left: 3%;
-    flex-shrink: 0; 
-}
-
-.frame-part img {
-    position: relative;
-    top: 0;
-    left: 10%;    
-    width: 100px;
-    height: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    transition: transform 0.2s ease-in-out, border 0.1s ease-in-out, opacity 0.2s ease-in-out;
-    border-radius: 14px;
-    opacity: 0.85;
-}
-
-.frame-part img:hover {
-    opacity: 0.9;
-    transform: scale(1.07);
-}
-
-.part3 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.frame-name {
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 75%;
-    height: 75%;
-    margin: auto;
-    color: white;
-    position: relative;
-}
-
-.frame-name span {
-    opacity: 0;
-    animation: appear 0.3s forwards;
-}
-
-@keyframes appear {
-    to {
-        opacity: 1;
+    * {
+        box-sizing: border-box;
+        border: 0px solid rgb(255, 255, 255);
     }
-}
 
-.card-details {
-    display: none;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    font-size: 0.8em;
-    color: white;
-}
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: white;
+        font-family: 'Tektur', cursive;
+    }
 
-.frame-part:hover .card-details {
-    display: block;
-}
+    .container {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+    }
 
-#prev-button,
-#next-button {
-    width: 20px;
-    height: 20px;
-    position: relative;
-    bottom: -80%;
-    border-style: solid;
-    border-width: 10px;
-    border-color: transparent;
-    background-color: transparent;
-    border-radius: 0;
-}
+    .top-section {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 52px;
+        background: #181E2F;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 10px;
+    }
 
-#prev-button {
-    border-right-color: white;
-    left: -10%;
-}
+    .main-section {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: calc(100% - 52px);
+        display: flex;
+        background-image: url('imgs/Rectangle1.jpg');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
 
-#next-button {
-    border-left-color: white;
-    right: -10%;
-}
+    .main-section .section {
+        height: 100%;
+    }
 
-.button-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 0px; /* No gap */
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    align-items: center;
-    justify-items: center; /* Center items horizontally in their cells */
-}
+    .main-section .section1 {
+        flex-grow: 639;
+        flex-basis: 64%;
+        background: #652f01 url("img/main_bg.png");
+        background-size: 100% 100%;
+        position: relative;
+    }
 
-.button-cell {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    .main-section .section2 {
+        flex-grow: 210;
+        flex-basis: 21%;
+        display: flex;
+        flex-direction: column;
+    }
 
-.button-cell img {
-    max-width: 80%;
-    max-height: 80%;
-    object-fit: contain;
-    border-radius: 10px;
-    border: #000000 0px solid;
-}
+    .main-section .section2 .part1 {
+        flex-grow: 46;
+        flex-basis: 4%;
+        background: url("img/section2-part1.png");
+        background-size: 100% 100%;
+        position: relative;
+    }
 
-/* Add specific styles for new frames if needed */
-#frame3 {border: #000000 1px solid;
-    /* add your specific styles here */
-}
+    .main-section .section2 .part2 {
+        flex-grow: 75;
+        flex-basis: 7%;
+        background: url("img/section2-part2.png");
+        background-size: 100% 100%;
+        position: relative;
+    }
 
-#frame4 {border: #000000 1px solid;
-    /* add your specific styles here */
-}
+    .main-section .section2 .part3 {
+        flex-grow: 358;
+        flex-basis: 33%;
+        background: url("img/section2-part3.png");
+        background-size: 100% 100%;
+        position: relative;
+    }
 
-#frame5 {border: #000000 1px solid;
-    /* add your specific styles here */
-}
+    .main-section .section2 .part4 {
+        flex-grow: 450;
+        background: url("img/section2-part4.png");
+        background-size: 100% 100%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+    }
 
-.mint {
-    background: white;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid black;
-}
+    .main-section .section3 {
+        flex-grow: 151;
+        flex-basis: 15%;
+        background: url("img/section3_bg.png");
+        background-size: 140% 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-.mint input[type="text"] {
-    font-family: 'Tektur', cursive;
-    color: gray;
-    border: none;
-    border-bottom: 2px solid gray;
-    background: transparent;
-    margin-bottom: 20px;
-    width: 100%;
-    padding: 10px 0;
-}
+    .inner-div {
+        position: relative;
+        top: 9%;
+        left: 7%;
+        width: 86%;
+        height: 61.92%;
+        background: url("img/section1_display2.png");
+        background-size: 100% 100%;
+        align-items: center;
+        justify-content: center;
+        border: #e53131 0px solid;
+    }
 
-.mint input[type="text"]::placeholder {
-    color: gray;
-}
+    .bottom-div {
+        position: absolute;
+        bottom: 5.5%;
+        left: 7%;
+        width: 86%;
+        height: 20%;
+        background: #000000;
+        display: flex;
+        overflow-x: auto;
+        scrollbar-width: none;
+        border-radius: 8px;
+        /* Add the following line */
+        align-items: center;
+    }
 
-.mint button {
-    font-family: 'Tektur', cursive;
-    color: black;
-    background: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background 0.3s ease-in-out;
-}
 
-.mint button:hover {
-    background: gray;
-    color: white;
-}
-/* Total Scrollbar */
-::-webkit-scrollbar {
-    width: 12px;
-}
 
-/* Track */
-::-webkit-scrollbar-track {
-    background: #f1f1f1;
-}
+    .bottom-div::-webkit-scrollbar {
+        width: 5px;
+        /* Adjust width of scrollbar */
+    }
 
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: #888;
-}
+    .bottom-div::-webkit-scrollbar-track {
+        background: transparent;
+        /* Remove scrollbar track background */
+    }
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #555;
-}
+    .bottom-div::-webkit-scrollbar-thumb {
+        background: #d55901;
+        /* Scrollbar color (orange) */
+        border-radius: 50px;
+        /* Round corners on scrollbar */
+    }
 
-.frame-container::-webkit-scrollbar {
-    width: 5px; /* Adjust width of scrollbar */
-}
+    .bottom-div::-webkit-scrollbar-thumb:hover {
+        background: #FF4500;
+        /* Darken the scrollbar color on hover */
+    }
 
-.frame-container::-webkit-scrollbar-track {
-    background: transparent; /* Remove scrollbar track background */
-}
 
-.frame-container::-webkit-scrollbar-thumb {
-    background: #467e67; /* Scrollbar color */
-    border-radius: 50px; /* Round corners on scrollbar */
-}
+    .nav-item {
+        width: 70px;
+        height: 70px;
+        border: 3px dashed rgb(239, 64, 0);
+        background: black;
+        position: relative;
+        /* Update these lines */
+        margin: 0 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        border-radius: 7%;
+    }
 
-.frame-container::-webkit-scrollbar-thumb:hover {
-    background: #555; /* Scrollbar color on hover */
-}
+    .nav-item::before,
+    .nav-item::after {
+        content: '';
+        position: absolute;
+        background: white;
+    }
+
+    .nav-item::before {
+        height: 6px;
+        width: 40%;
+    }
+
+    .nav-item::after {
+        width: 6px;
+        height: 40%;
+    }
+
+    .nav-item:hover::before,
+    .nav-item:hover::after {
+        background-color: #e56531;
+    }
+
+    .nav-item:hover {
+        border: 12px solid #e56531;
+        background-color: #e56531;
+    }
+
+    .section2 {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+        z-index: 1;
+    }
+
+    #account {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        color: white;
+        margin-left: 10px;
+    }
+
+    .button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    #sign-in-button {
+        right: 140px;
+    }
+
+    #sign-out-button {
+        right: 50px;
+    }
+
+    .menu-button {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 30px;
+        height: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        cursor: pointer;
+    }
+
+    .menu-button div {
+        width: 100%;
+        height: 4px;
+        background: white;
+    }
+
+    .frame-container {
+        height: 66%;
+        width: 84%;
+        margin: 50px 0px 0px 53px;
+        top: 54px;
+        left: 5px;
+        align-items: center;
+        justify-content: center;
+        border: #ffc400 0px solid;
+        position: relative;
+        display: flex;
+        /* Use flexbox layout */
+        flex-wrap: nowrap;
+        /* Prevent the frames from wrapping */
+        overflow-y: auto;
+        /* Make the container scrollable */
+        scrollbar-width: thin;
+        /* Make the scrollbar thinner (this property might not work in all browsers) */
+
+    }
+
+    .frame {
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        display: none;
+        flex-direction: row;
+        height: 100%;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        border: #31e5d0 0px solid;
+    }
+
+    .frame.active {
+        display: flex;
+    }
+
+    .frame-part {
+        flex: 1;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        border: #e56531 0px solid;
+        height: 100%;
+        margin-left: 10px;
+        flex-shrink: 0;
+    }
+
+    .frame-part img {
+        position: relative;
+        top: 0;
+        left: 10%;
+        width: 100px;
+        height: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        transition: transform 0.2s ease-in-out, border 0.1s ease-in-out, opacity 0.2s ease-in-out;
+        border-radius: 14px;
+        opacity: 0.85;
+    }
+
+    .frame-part img:hover {
+        opacity: 0.9;
+        transform: scale(1.07);
+    }
+
+    .part3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .frame-name {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 75%;
+        height: 75%;
+        margin: auto;
+        color: white;
+        position: relative;
+    }
+
+    .frame-name span {
+        opacity: 0;
+        animation: appear 0.3s forwards;
+    }
+
+    @keyframes appear {
+        to {
+            opacity: 1;
+        }
+    }
+
+    .card-details {
+        display: none;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        font-size: 0.8em;
+        color: white;
+    }
+
+    .frame-part:hover .card-details {
+        display: block;
+    }
+
+    #prev-button,
+    #next-button {
+        width: 20px;
+        height: 20px;
+        position: relative;
+        bottom: -80%;
+        border-style: solid;
+        border-width: 10px;
+        border-color: transparent;
+        background-color: transparent;
+        border-radius: 0;
+    }
+
+    #prev-button {
+        border-right-color: white;
+        left: -10%;
+    }
+
+    #next-button {
+        border-left-color: white;
+        right: -10%;
+    }
+
+    .button-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 0px;
+        /* No gap */
+        width: 100%;
+        /* Full width */
+        height: 100%;
+        /* Full height */
+        align-items: center;
+        justify-items: center;
+        /* Center items horizontally in their cells */
+    }
+
+    .button-cell {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .button-cell img {
+        max-width: 80%;
+        max-height: 80%;
+        object-fit: contain;
+        border-radius: 10px;
+        border: #000000 0px solid;
+    }
+
+    /* Add specific styles for new frames if needed */
+    #frame3 {
+        border: #000000 1px solid;
+        /* add your specific styles here */
+    }
+
+    #frame4 {
+        border: #000000 1px solid;
+        /* add your specific styles here */
+    }
+
+    #frame5 {
+        border: #000000 1px solid;
+        /* add your specific styles here */
+    }
+
+    .mint {
+        background: white;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid black;
+    }
+
+    .mint input[type="text"] {
+        font-family: 'Tektur', cursive;
+        color: gray;
+        border: none;
+        border-bottom: 2px solid gray;
+        background: transparent;
+        margin-bottom: 20px;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .mint input[type="text"]::placeholder {
+        color: gray;
+    }
+
+    .mint button {
+        font-family: 'Tektur', cursive;
+        color: black;
+        background: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: background 0.3s ease-in-out;
+    }
+
+    .mint button:hover {
+        background: gray;
+        color: white;
+    }
+
+    /* Total Scrollbar */
+    ::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: #888;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+
+    .frame-container::-webkit-scrollbar {
+        width: 5px;
+        /* Adjust width of scrollbar */
+    }
+
+    .frame-container::-webkit-scrollbar-track {
+        background: transparent;
+        /* Remove scrollbar track background */
+    }
+
+    .frame-container::-webkit-scrollbar-thumb {
+        background: #467e67;
+        /* Scrollbar color */
+        border-radius: 50px;
+        /* Round corners on scrollbar */
+    }
+
+    .frame-container::-webkit-scrollbar-thumb:hover {
+        background: #555;
+        /* Scrollbar color on hover */
+    }
