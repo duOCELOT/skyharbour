@@ -26,7 +26,7 @@ frames.forEach((frame) => {
     frameParts.forEach((framePart) => {
         const cardImg = framePart.querySelector('img');
         framePart.addEventListener('mouseover', () => {
-            cardImg.style.border = "5px solid orange";
+            cardImg.style.border = "0px solid orange";
         });
         framePart.addEventListener('mouseout', () => {
             cardImg.style.border = "none";

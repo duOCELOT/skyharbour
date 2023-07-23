@@ -103,6 +103,9 @@ body {
     flex-basis: 15%;
     background: url("img/section3_bg.png");
     background-size: 140% 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .inner-div {
@@ -129,19 +132,38 @@ body {
     overflow-x: auto;
     scrollbar-width: none;
     border-radius: 8px;
+    /* Add the following line */
+    align-items: center;
 }
+
+
 
 .bottom-div::-webkit-scrollbar {
-    display: none;
+    width: 5px; /* Adjust width of scrollbar */
 }
 
+.bottom-div::-webkit-scrollbar-track {
+    background: transparent; /* Remove scrollbar track background */
+}
+
+.bottom-div::-webkit-scrollbar-thumb {
+    background: #d55901; /* Scrollbar color (orange) */
+    border-radius: 50px; /* Round corners on scrollbar */
+}
+
+.bottom-div::-webkit-scrollbar-thumb:hover {
+    background: #FF4500; /* Darken the scrollbar color on hover */
+}
+
+
 .nav-item {
-    width: 90px;
-    height: 90px;
+    width: 70px;
+    height: 70px;
     border: 3px dashed rgb(239, 64, 0);
     background: black;
     position: relative;
-    margin: auto;
+    /* Update these lines */
+    margin: 0 10px; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -224,25 +246,32 @@ body {
 
 .frame-container {
     height: 70%;
-    width: 87%;
-    margin: 50px 0px 0px 50px ;
+    width: 85%;
+    margin: 50px 0px 0px 53px ;
+    top: 54px;
+    left: 13px;
     align-items: center;
     justify-content: center;
     border: #ffc400 0px solid;
     position: relative;
+    display: flex;  /* Use flexbox layout */
+    flex-wrap: nowrap;  /* Prevent the frames from wrapping */
+    overflow-y: auto;  /* Make the container scrollable */
+    scrollbar-width: thin;  /* Make the scrollbar thinner (this property might not work in all browsers) */
+
 }
 
 .frame {
     position: absolute;
-    top: 0;
+    top: 30;
     left: 0;
     display: none;
     flex-direction: row;
     height: 100%;
+    width: 100%;
     align-items: center;
     justify-content: center;
     border: #31e5d0 0px solid;
-
 }
 
 .frame.active {
@@ -255,18 +284,26 @@ body {
     align-items: center;
     justify-content: center;
     border: #e56531 0px solid;
+    height: 100%;
+    margin-left: 3%;
+    flex-shrink: 0; 
 }
 
 .frame-part img {
-    width: 70%;
-    height: auto;
-    max-height: 70%;
+    position: relative;
+    top: 0;
+    left: 10%;    
+    width: 100px;
+    height: 100%;
+    max-height: 100%;
     object-fit: contain;
-    transition: transform 0.2s ease-in-out, border 0.1s ease-in-out;
-    border-radius: 30px;
+    transition: transform 0.2s ease-in-out, border 0.1s ease-in-out, opacity 0.2s ease-in-out;
+    border-radius: 14px;
+    opacity: 0.85;
 }
 
 .frame-part img:hover {
+    opacity: 0.9;
     transform: scale(1.07);
 }
 
@@ -372,4 +409,80 @@ body {
 
 #frame5 {border: #000000 1px solid;
     /* add your specific styles here */
+}
+
+.mint {
+    background: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+}
+
+.mint input[type="text"] {
+    font-family: 'Tektur', cursive;
+    color: gray;
+    border: none;
+    border-bottom: 2px solid gray;
+    background: transparent;
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.mint input[type="text"]::placeholder {
+    color: gray;
+}
+
+.mint button {
+    font-family: 'Tektur', cursive;
+    color: black;
+    background: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.mint button:hover {
+    background: gray;
+    color: white;
+}
+/* Total Scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.frame-container::-webkit-scrollbar {
+    width: 5px; /* Adjust width of scrollbar */
+}
+
+.frame-container::-webkit-scrollbar-track {
+    background: transparent; /* Remove scrollbar track background */
+}
+
+.frame-container::-webkit-scrollbar-thumb {
+    background: #467e67; /* Scrollbar color */
+    border-radius: 50px; /* Round corners on scrollbar */
+}
+
+.frame-container::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Scrollbar color on hover */
 }
