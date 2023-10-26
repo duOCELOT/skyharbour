@@ -1,6 +1,6 @@
 import { getConfig } from "./config.js";
 
-const nearConfig = getConfig("mainnet");
+const nearConfig = getConfig("testnet");
 
 const { connect, WalletConnection, Contract, utils } = nearApi;
 const signInButton = document.getElementById("sign-in-button");
