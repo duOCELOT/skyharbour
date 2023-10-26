@@ -9,7 +9,7 @@ export function getConfig(network) {
             keyStore: new keyStores.BrowserLocalStorageKeyStore(),
             nodeUrl: "https://rpc.mainnet.near.org",
             contractName: CONTRACT_NAME,
-            walletUrl: "https://wallet.near.org",
+            walletUrl: "https://app.mynearwallet.com",
             helperUrl: "https://helper.mainnet.near.org",
         };
         case "testnet":
