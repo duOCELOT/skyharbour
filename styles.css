@@ -130,11 +130,12 @@
         left: 8%;
         width: 84%;
         height: 18%;
-        background: #000000;
+        background: url("img/bottom-dib-bg.png");
         display: flex;
         overflow-x: auto;
         scrollbar-width: none;
         border-radius: 8px;
+        padding-left: 68px ;
         /* Add the following line */
         align-items: center;
     }
