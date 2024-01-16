@@ -1,26 +1,31 @@
 let currentFrame = 0;
 const frames = document.querySelectorAll('.frame');
-const frameNames = ['Your Profile','Lore','Choose_yourCrew', 'Choose your Ship', 'Forth Frame', 'Fith Frame']; // Add more names as needed
+const frameNames = ['HOME', 'STORY', 'NFTs', 'FACTIONS', 'RACES', 'SKILLS', 'EXPLORATION', 'MISSIONS', 'ARTIFACTS', 'GALAXY', 'LEGENDS'];
+const bottomButtons = document.querySelectorAll('.bottom-div .item_button');
 
+// Function to update the active frame
 function updateFrames() {
     frames.forEach((frame, index) => {
+        frame.classList.toggle('active', index === currentFrame);
+
         if (index === currentFrame) {
-            frame.classList.add('active');
             const frameNameElement = document.getElementById('frame-name');
-            frameNameElement.innerHTML = '';
-            const frameName = frameNames[index];
-            for (let i = 0; i < frameName.length; i++) {
-                const letter = document.createElement('span');
-                letter.textContent = frameName[i];
-                letter.style.animationDelay = `${i * 0.1}s`;
-                frameNameElement.appendChild(letter);
-            }
-        } else {
-            frame.classList.remove('active');
+            frameNameElement.innerHTML = frameNames[index].split('')
+                .map((char, i) => `<span style="animation-delay:${i * 0.1}s">${char}</span>`)
+                .join('');
         }
     });
 }
 
+// Event listeners for bottom navigation buttons
+bottomButtons.forEach((button, index) => {
+    button.addEventListener('click', () => {
+        currentFrame = index;
+        updateFrames();
+    });
+});
+
+// Event listeners for frame-part hover effects
 frames.forEach((frame) => {
     const frameParts = frame.querySelectorAll('.frame-part');
     frameParts.forEach((framePart) => {
@@ -34,6 +39,7 @@ frames.forEach((frame) => {
     });
 });
 
+// Event listeners for prev and next buttons
 document.getElementById('prev-button').addEventListener('click', () => {
     currentFrame = Math.max(0, currentFrame - 1);
     updateFrames();
@@ -44,4 +50,5 @@ document.getElementById('next-button').addEventListener('click', () => {
     updateFrames();
 });
 
-updateFrames();  // Initialize
+// Initialize the frames display
+updateFrames();

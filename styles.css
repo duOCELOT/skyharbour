@@ -288,6 +288,17 @@
 
     }
 
+
+    .frame-mask {
+        overflow: hidden;
+        position: absolute;
+        /* Position and size this to match the green area exactly */
+        top: 0; /* adjust as necessary */
+        left: 0; /* adjust as necessary */
+        width: 100%; /* adjust as necessary */
+        height: 100%; /* adjust as necessary */
+      }
+
     .frame {
         position: absolute;
         bottom: 10px;
