@@ -413,7 +413,6 @@
 
 
     .card-details {
-        display: none;
         position: absolute;
         bottom: 0;
         left: 0;
@@ -421,9 +420,9 @@
         color: white;
     }
 
-    .frame-part:hover .card-details {
+    /*.frame-part:hover .card-details {
         display: block;
-    }
+    }*/
 
     #prev-button,
     #next-button {
