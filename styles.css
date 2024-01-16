@@ -106,9 +106,10 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        position: relative; /* Add this line */
+        position: relative;
+        /* Add this line */
 
-        
+
     }
 
     .inner-div {
@@ -135,7 +136,7 @@
         overflow-x: auto;
         scrollbar-width: none;
         border-radius: 8px;
-        padding-left: 68px ;
+        padding-left: 68px;
         /* Add the following line */
         align-items: center;
     }
@@ -230,25 +231,25 @@
         right: 140px;
         font-family: 'Tektur', cursive;
         color: rgb(255, 255, 255);
-        background: rgba(255, 255, 255, 0); 
+        background: rgba(255, 255, 255, 0);
         border: none;
         padding: 10px 20px;
         cursor: pointer;
         transition: background 0.3s ease-in-out;
-    }     
-    
+    }
+
     #sign-out-button {
         right: 50px;
         font-family: 'Tektur', cursive;
         color: rgb(255, 255, 255);
-        background: rgba(255, 255, 255, 0); 
+        background: rgba(255, 255, 255, 0);
         border: none;
         padding: 10px 20px;
         cursor: pointer;
         transition: background 0.3s ease-in-out;
-    }          
+    }
 
-     .menu-button {
+    .menu-button {
         position: absolute;
         right: 10px;
         top: 50%;
@@ -268,6 +269,7 @@
     }
 
     .frame-container {
+        position: relative;
         height: 66%;
         width: 84%;
         margin: 50px 0px 0px 53px;
@@ -276,45 +278,45 @@
         align-items: center;
         justify-content: center;
         border: #ffc400 0px solid;
-        position: relative;
         display: flex;
-        /* Use flexbox layout */
         flex-wrap: nowrap;
-        /* Prevent the frames from wrapping */
-        overflow-y: auto;
-        /* Make the container scrollable */
-        scrollbar-width: thin;
-        /* Make the scrollbar thinner (this property might not work in all browsers) */
-
-    }
-
-
-    .frame-mask {
         overflow: hidden;
-        position: absolute;
-        /* Position and size this to match the green area exactly */
-        top: 0; /* adjust as necessary */
-        left: 0; /* adjust as necessary */
-        width: 100%; /* adjust as necessary */
-        height: 100%; /* adjust as necessary */
-      }
+        /* This will clip the content to the frame-container's bounds */
+        scrollbar-width: thin;
+        /* Other styles... */
+    }
 
     .frame {
         position: absolute;
         bottom: 10px;
         left: 0;
         display: none;
+        /* start with frame hidden */
         flex-direction: row;
         height: 100%;
         width: 100%;
         align-items: center;
         justify-content: center;
-        border: #31e5d0 0px solid;
+        /* Other styles... */
     }
 
     .frame.active {
         display: flex;
+        /* show the active frame */
     }
+
+
+
+
+    /*.frame-mask {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url('img/section1_display_mask.png');
+        background-size: cover;
+      } */
 
     .frame-part {
         flex: 1;
@@ -335,7 +337,7 @@
         height: 100%;
         max-height: 100%;
         object-fit: contain;
-        transition: transform 0.2s ease-in-out, border 0.1s ease-in-out, opacity 0.2s ease-in-out;
+        /* transition: transform 0.2s ease-in-out, border 0.1s ease-in-out, opacity 0.2s ease-in-out;*/
         border-radius: 14px;
         opacity: 0.85;
     }
@@ -374,6 +376,41 @@
             opacity: 1;
         }
     }
+
+    @keyframes glitch-effect {
+        0% {
+            opacity: 1;
+            transform: translate3d(0, 0, 0) skew(0deg);
+        }
+
+        20% {
+            transform: translate3d(-5px, 0, 0) skew(-5deg);
+        }
+
+        40% {
+            transform: translate3d(5px, 0, 0) skew(5deg);
+        }
+
+        60% {
+            transform: translate3d(-5px, 0, 0) skew(-5deg);
+            opacity: 0.5;
+        }
+
+        80% {
+            transform: translate3d(5px, 0, 0) skew(5deg);
+            opacity: 0.7;
+        }
+
+        100% {
+            opacity: 1;
+            transform: translate3d(0, 0, 0) skew(0deg);
+        }
+    }
+
+    .frame-glitch {
+        animation: glitch-effect 1s infinite;
+    }
+
 
     .card-details {
         display: none;
@@ -461,8 +498,9 @@
         /* Update the path to your image */
         background-repeat: repeat-y;
         background-position: top;
-        background-size: 100%; /* This will stretch the image to cover the entire width of the element */
-      padding: 20px;
+        background-size: 100%;
+        /* This will stretch the image to cover the entire width of the element */
+        padding: 20px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -545,24 +583,29 @@
     .item_button p {
         margin: 0;
         padding-bottom: 6px;
-        color: #f1f1f1;    
-        font: 600 0.6em 'Tektur' , cursive;
-        display: flex; /* Add this */
-        justify-content: center; /* Horizontally center text */
-        align-items: top; /* Vertically center text */
+        color: #f1f1f1;
+        font: 600 0.6em 'Tektur', cursive;
+        display: flex;
+        /* Add this */
+        justify-content: center;
+        /* Horizontally center text */
+        align-items: top;
+        /* Vertically center text */
     }
 
     .printer {
-    
+
         width: 100%;
-        position: absolute; /* Add this line */
-        top: 0; /* Adjust as needed */
-        left: 0; /* Adjust as needed */
+        position: absolute;
+        /* Add this line */
+        top: 0;
+        /* Adjust as needed */
+        left: 0;
+        /* Adjust as needed */
     }
-    
+
     .printer img {
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
-    

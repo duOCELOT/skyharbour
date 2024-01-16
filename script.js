@@ -9,10 +9,21 @@ function updateFrames() {
         frame.classList.toggle('active', index === currentFrame);
 
         if (index === currentFrame) {
+            // Add the glitch class to the new active frame
+            frame.classList.add('frame-glitch');
+            // Reset the glitch effect after it runs
+            setTimeout(() => {
+                frame.classList.remove('frame-glitch');
+            }, 1000); // Animation duration
+
+            // Update the frame name display
             const frameNameElement = document.getElementById('frame-name');
             frameNameElement.innerHTML = frameNames[index].split('')
                 .map((char, i) => `<span style="animation-delay:${i * 0.1}s">${char}</span>`)
                 .join('');
+        } else {
+            // Remove the glitch class from all other frames
+            frame.classList.remove('frame-glitch');
         }
     });
 }
