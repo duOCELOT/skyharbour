@@ -19,7 +19,7 @@ function updateFrames() {
             // Update the frame name display
             const frameNameElement = document.getElementById('frame-name');
             frameNameElement.innerHTML = frameNames[index].split('')
-                .map((char, i) => `<span style="animation-delay:${i * 0.1}s">${char}</span>`)
+                .map((char, i) => `<span style="animation-delay:${i * 0.2}s">${char}</span>`)
                 .join('');
         } else {
             // Remove the glitch class from all other frames

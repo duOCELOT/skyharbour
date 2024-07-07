@@ -297,6 +297,7 @@
         width: 100%;
         align-items: center;
         justify-content: center;
+        left: 3%;
         /* Other styles... */
     }
 
@@ -384,21 +385,21 @@
         }
 
         20% {
-            transform: translate3d(-5px, 0, 0) skew(-5deg);
+            transform: translate3d(-2px, 0, 0) skew(-3deg);
         }
 
         40% {
-            transform: translate3d(5px, 0, 0) skew(5deg);
+            transform: translate3d(2px, 0, 0) skew(2deg);
         }
 
-        60% {
-            transform: translate3d(-5px, 0, 0) skew(-5deg);
+        30% {
+            transform: translate3d(-2px, 0, 0) skew(-5deg);
             opacity: 0.5;
         }
 
-        80% {
-            transform: translate3d(5px, 0, 0) skew(5deg);
-            opacity: 0.7;
+        10% {
+            transform: translate3d(3px, 0, 0) skew(6deg);
+            opacity: 0.2;
         }
 
         100% {
