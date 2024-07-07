@@ -429,18 +429,36 @@
         animation: glitch-effect 1s infinite;
     }
 
-
     .card-details {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        font-size: 0.8em;
-        color: white;
+        margin-top: 20px; /* Add margin to separate the text from the iframe */
+        text-align: center; /* Center align the text */
     }
-
     /*.frame-part:hover .card-details {
         display: block;
     }*/
+
+
+  
+    .card-details {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+    
+    .card-name {
+        font-size: 2em; /* Increase the font size */
+        font-weight: bold;
+        color: white;  /* Change text color to white */
+        text-align: center; /* Center align the text */
+        margin-bottom: 10px; /* Add some space below the title */
+    }
+    
+    .card-description {
+        font-size: 1.2em; /* Increase the font size */
+        color: white;  /* Change text color to white */
+        text-align: center;  /* Center align the text */
+    }
 
     #prev-button,
     #next-button {
