@@ -112,6 +112,23 @@
 
     }
 
+    #home-frame {
+        border-radius: 20px; /* Adjust the radius as needed */
+    }
+    
+    .rounded-iframe {
+        width: 100%; /* Make iframe width 100% of parent */
+        height: 100%; /* Make iframe height 100% of parent */
+        border: none; /* Remove default iframe border */
+        border-radius: 20px; /* Rounded corners */
+        max-width: 560px; /* Maximum width of the iframe */
+        max-height: 315px; /* Maximum height of the iframe */
+        position: relative; /* Ensure position is relative */
+        top: 20px; /* Adjust top position to move it down */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow */
+        border: 3px solid rgba(0, 0, 0, 0.5); /* Transparent black border */
+    }
+
     .inner-div {
         position: relative;
         top: 9%;
