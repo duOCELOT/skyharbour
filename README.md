@@ -27,24 +27,23 @@ Sky Harbour is built on **NEAR Protocol**, leveraging its scalability and develo
 ## Roadmap
 
 ### Phase 01
-
-- NFT Collection for fundraising
-- Develop the game concept
-- Build a team for MVP
-- Social media and Web3 site
-- Start Community
+👍 NFT Collection for fundraising
+👍 Develop the game concept
+👍 Build a team for MVP
+👍 Social media and Web3 site
+👍 Start Community
 
 ### Phase 02
 
-- Build game engine
-- Deeper development of the game design
-- Create game assets
-- Build collision map scenario
-- Custom Race config and template (Cyborg)
-- Build a playable scene
-- Build a flying ship real size
-- WEB3 dAPP
-- Comics #1
+👍 Build game engine
+👍 Deeper development of the game design
+👍 Create base game assets
+👍 Build collision map first scenario
+👍 Custom Race config and template (Cyborg)
+👍 Build a playable scene
+👍 Build a flying ship real size
+☝️ WEB3 dAPP
+👍 Comics #1
 
 ### Phase 03
 
