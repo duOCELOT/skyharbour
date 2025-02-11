@@ -2,6 +2,9 @@
 
 **Sky Harbour** is an exciting new game currently under development by duOCELOT, a collaboration between The Clan Guild and The Workship Studio.
 
+[Sky Harbour dAPP](https://duocelot.github.io/skyharbour/
+) ( under development )
+
 ## Overview
 
 "Within a vortex of the void, a flying archipelago emerges between realities. These islands, suspended in vastness, conceal a secret: the Firerune. This pulsating and enigmatic material harbors hidden properties yet to be unveiled.
@@ -27,23 +30,23 @@ Sky Harbour is built on **NEAR Protocol**, leveraging its scalability and develo
 ## Roadmap
 
 ### Phase 01
-👍 NFT Collection for fundraising
-👍 Develop the game concept
-👍 Build a team for MVP
-👍 Social media and Web3 site
-👍 Start Community
+👍 NFT Collection for fundraising <br>
+👍 Develop the game concept <br>
+👍 Build a team for MVP <br>
+👍 Social media and Web3 site <br>
+👍 Start Community <br>
 
 ### Phase 02
 
-👍 Build game engine
-👍 Deeper development of the game design
-👍 Create base game assets
-👍 Build collision map first scenario
-👍 Custom Race config and template (Cyborg)
-👍 Build a playable scene
-👍 Build a flying ship real size
-☝️ WEB3 dAPP
-👍 Comics #1
+👍 Build game engine <br>
+👍 Deeper development of the game design  <br>
+👍 Create base game assets <br>
+👍 Build collision map first scenario <br>
+👍 Custom Race config and template (Cyborg) <br>
+👍 Build a playable scene <br>
+👍 Build a flying ship real size <br>
+☝️ WEB3 dAPP <br>
+👍 Comics #1 <br>
 
 ### Phase 03
 
