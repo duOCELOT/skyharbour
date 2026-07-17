@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sky Harbour — cargo over the void</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400;600;700&display=swap" rel="stylesheet">
+    <script type="importmap">
+      { "imports": { "three": "./client/vendor/three.module.min.js" } }
+    </script>
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="flight-overlay" hidden></div>
+    <div class="container">
+        <div class="top-section">
+            <p id="account">SKY HARBOUR BRIDGE — DOCK IN, PILOT</p>
+            <button id="sign-in-button" class="button">CONNECT WALLET</button>
+            <button id="sign-out-button" class="button">SIGN OUT</button>
+            <div class="menu-button" aria-hidden="true">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div class="main-section">
+            <div class="section section1">
+                <div class="inner-div">
+                    <div class="frame-container">
+                        <div class="frame-mask">
+
+                        <div class="frame" id="home-frame">
+                            <canvas id="void-screen" aria-label="Wireframe sky-islands over the void; a cargo ship runs its delivery line to the settlement"></canvas>
+                            <div class="frame-part screen-copy">
+                                <div class="card-details">
+                                    <p class="card-name">CARGO OVER THE VOID</p>
+                                    <p class="card-description">
+                                        There is no ground below — only the void. Pilots run cargo between
+                                        floating sky-islands and the settlement, a city every delivery builds a
+                                        little further. Your ship is yours, your crew take their share, your
+                                        fuel burns for real. Everything in this world is a token.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="frame" id="story-frame">
+                            <div class="frame-part"><img src="img/firerune.png" alt="A firerune — rare cargo pulled from the deep sky">
+                                <div class="card-details">
+                                    <p class="card-name">THE SETTLEMENT MUST RISE</p>
+                                    <p class="card-description">
+                                        When the ground gave out, the survivors anchored a harbour to the sky.
+                                        Every plank, every ingot, every firerune it takes to finish the city
+                                        arrives the same way: in a cargo hold, across the void, flown by
+                                        someone paid to risk the crossing. That someone is you.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="frame" id="hangar-frame">
+                            <div class="frame-part board loadout-bay"><div class="card-details">
+                                <p class="card-name">LOADOUT BAY</p>
+                                <div class="loadout-cols">
+                                    <canvas id="ship-blueprint" aria-label="Top-view ship schematic — hull, cargo bay, engines"></canvas>
+                                    <div class="loadout-right">
+                                        <div id="ship-specs"></div>
+                                        <div id="ship-hold"></div>
+                                        <div id="ship-switcher"></div>
+                                        <div id="provisions">
+                                            <p class="pump-title">PROVISIONS — 1G = 4 FUEL · 2 SHELLS</p>
+                                            <button class="pump-btn console-btn" data-token="FUEL" data-gold="10">10 G</button>
+                                            <button class="pump-btn console-btn" data-token="FUEL" data-gold="25">25 G</button>
+                                            <button class="pump-btn console-btn" data-token="FUEL" data-gold="50">50 G</button>
+                                            <button class="pump-btn console-btn" data-token="AMMO" data-gold="5">5 G</button>
+                                            <button class="pump-btn console-btn" data-token="AMMO" data-gold="10">10 G</button>
+                                        </div>
+                                        <button id="launch-btn" class="console-btn" disabled>SELECT A CONTRACT</button>
+                                    </div>
+                                </div>
+                            </div></div>
+                        </div>
+
+                        <div class="frame" id="crew-frame">
+                            <div class="frame-part"><img src="img/crew.png" alt="Crew for hire at the harbour market">
+                                <div class="card-details">
+                                    <p class="card-name">CREW FOR HIRE</p>
+                                    <p class="card-description">
+                                        Crew are NFTs with skills — fuel management, attack, defense. Owners
+                                        list them at a share of the mission reward. The terms freeze the moment
+                                        you accept a contract: no renegotiation mid-void.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="frame-part board"><div class="card-details"><p class="card-name">HIRE FOR NEXT RUN</p><div class="live-mount" id="crew-mount"></div></div></div>
+                        </div>
+
+                        <div class="frame" id="missions-frame">
+                            <div class="frame-part board">
+                                <div class="card-details">
+                                    <p class="card-name">MISSION BOARD</p>
+                                    <div class="live-mount" id="ghosts-mount"></div>
+                                    <div class="live-mount" id="missions-mount"></div><button id="generate-btn" class="console-btn">REQUEST NEW POSTINGS</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="frame" id="voidchart-frame">
+                            <div class="frame-part"><img src="img/routes.png" alt="Void chart — delivery routes between sky-islands">
+                                <div class="card-details">
+                                    <p class="card-name">VOID CHART</p>
+                                    <p class="card-description">Distance is fuel, and fuel is money. Plot the crossing before you burn for it.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="frame" id="settlement-frame">
+                            <div class="frame-part board">
+                                <div class="card-details">
+                                    <div class="live-mount" id="settlement-mount"></div>
+                                    <div class="live-mount" id="leaderboard-mount"></div>
+                                    <p class="card-description small">Everyone's deliveries feed one city. Airdrops will reward who helped most.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="frame" id="tokens-frame">
+                            <div class="frame-part board">
+                                <div class="card-details">
+                                    <p class="card-name">EVERYTHING IS A TOKEN</p>
+                                    <table class="board-table">
+                                        <tbody>
+                                            <tr><td class="gold">GOLD</td><td>the money — rewards, fees, crew shares</td></tr>
+                                            <tr><td>FUEL</td><td>burned every run · bought back from the fuel pool</td></tr>
+                                            <tr><td>AMMO</td><td>one shell per shot · loaded at the hangar bay</td></tr>
+                                            <tr><td>LOG · MINERAL · FURNITURE</td><td>cargo — 1 / 2 / 3 GOLD per unit delivered</td></tr>
+                                            <tr class="rare"><td class="gold">FIRERUNE</td><td>rare cargo — 10 GOLD per unit</td></tr>
+                                            <tr><td>SHIP · CREW</td><td>NFTs — your hull, your hands</td></tr>
+                                        </tbody>
+                                    </table>
+                                    <p class="card-description small">In-game they live on a fast ledger. Solana is the bank you claim to.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        </div>
+                    </div>
+
+                    <div id="tokens"></div>
+                </div>
+                <!-- The rail IS the mission builder: pick a ship, a contract, then crew.
+                     The remaining channels (info/lore) follow. Each button names its
+                     target frame + slug + monitor hint; script.js maps by data, not order. -->
+                <div class="bottom-div">
+                    <div class="item_button build-step" data-frame="hangar-frame" data-slug="ship" data-hint="1 · CHOOSE YOUR HULL"><p>1 · SHIP</p><div class="nav-item"></div></div>
+                    <div class="item_button build-step" data-frame="missions-frame" data-slug="mission" data-hint="2 · PICK A CONTRACT"><p>2 · MISSION</p><div class="nav-item"></div></div>
+                    <div class="item_button build-step" data-frame="crew-frame" data-slug="crew" data-hint="3 · HIRE YOUR HANDS"><p>3 · CREW</p><div class="nav-item"></div></div>
+                </div>
+            </div>
+            <div class="section section2">
+                <div class="part1"></div>
+                <div class="part2"></div>
+                <div class="part3">
+                    <div class="crt-monitor">
+                        <div class="crt-topbar">
+                            <button id="prev-button" class="crt-arrow" aria-label="Previous channel"></button>
+                            <span class="frame-name" id="frame-name"></span>
+                            <button id="next-button" class="crt-arrow" aria-label="Next channel"></button>
+                        </div>
+                        <canvas id="crt-screen" aria-label="Bridge monitor — phosphor-dot renders and comms"></canvas>
+                        <div id="crt-menu" hidden></div>
+                        <div class="crt-comms" id="crt-comms"></div>
+                        <div id="control-panel">
+                            <div id="panel-readout"></div>
+                            <button class="button-cell panel-buygold" data-cmd="buygold" title="Buy 100 GOLD with 0.1 SOL"><span class="btn-label">BUY GOLD · SOL</span></button>
+                        </div>
+                        <div class="card-details" id="card-details"></div>
+                        <div class="crt-ticker">
+                            <div class="readout-ticker" id="ticker">SKY HARBOUR BRIDGE — SYSTEMS NOMINAL</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="part4">
+                    <!-- 9-button console: row 1-2 are actions (data-cmd → bridge.js),
+                         row 3 + TOKENS/SETTLEMENT are screen channels (data-frame →
+                         script.js shows them on the big display). BUY GOLD lives in
+                         the monitor. -->
+                    <div class="button-grid">
+                        <div class="button-cell" data-cmd="dock" title="Dock / sign in"><img src="buttons/1.png" alt="Dock" /><span class="btn-label">DOCK</span></div>
+                        <div class="button-cell" data-cmd="postings" title="Request new mission postings"><img src="buttons/2.png" alt="Postings" /><span class="btn-label">POSTINGS</span></div>
+                        <div class="button-cell" data-cmd="hangarbay" title="Hangar bay — fuel, shells, hull repair"><img src="buttons/3.png" alt="Hangar bay" /><span class="btn-label">HANGAR BAY</span></div>
+                        <div class="button-cell" data-cmd="claim" title="Claim balances to the wallet"><img src="buttons/4.png" alt="Claim" /><span class="btn-label">CLAIM</span></div>
+                        <div class="button-cell" data-frame="tokens-frame" data-slug="tokens" data-hint="EVERYTHING IS A TOKEN" title="The token economy"><img src="buttons/5.png" alt="Tokens" /><span class="btn-label">TOKENS</span></div>
+                        <div class="button-cell" data-frame="settlement-frame" data-slug="settlement" data-hint="ONE CITY, EVERY PILOT" title="Settlement progress"><img src="buttons/6.png" alt="Settlement" /><span class="btn-label">SETTLEMENT</span></div>
+                        <div class="button-cell" data-frame="home-frame" data-slug="bridge" data-hint="CARGO OVER THE VOID" title="The bridge view"><img src="buttons/7.png" alt="Bridge" /><span class="btn-label">BRIDGE</span></div>
+                        <div class="button-cell" data-frame="voidchart-frame" data-slug="voidchart" data-hint="DISTANCE IS FUEL" title="Void chart"><img src="buttons/8.png" alt="Void chart" /><span class="btn-label">VOID CHART</span></div>
+                        <div class="button-cell" data-frame="story-frame" data-slug="story" data-hint="WHY THE CITY NEEDS YOU" title="The story"><img src="buttons/9.png" alt="Story" /><span class="btn-label">STORY</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="section section3">
+                <div class="printer" id="printer">
+                    <img src="img/printer.png" alt="The claim console — an old CRT wired to the chain">
+                </div>
+                <div class="mint" id="mint">
+                    <p class="manifest-title">CLAIM MANIFEST</p>
+                    <div id="manifest-mount"></div>
+                    <button id="claim-button" disabled>CLAIM TO WALLET</button>
+                    <div id="claims-mount"></div>
+                    <p class="manifest-stamp">CLAIM TO SOLANA — DOCK A PHANTOM WALLET</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fully-bundled Solana web3 (IIFE) → window.solanaWeb3. Self-contained
+         (buffer inlined); the browser-ESM build needs a bundler and can't
+         resolve its bare `import ... from 'buffer'` at runtime. -->
+    <script src="./client/vendor/solana-web3.iife.min.js"></script>
+    <script src="./script.js"></script>
+    <script type="module" src="./client/bridge.js"></script>
+    <script type="module" src="./client/flight.js"></script>
+
+</body>
+
+</html>

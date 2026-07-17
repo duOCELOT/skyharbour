@@ -1,0 +1,17 @@
+{
+  "network": "devnet",
+  "operator": "ArGbT4q2zNzwpp9j1GG3NGpLCUf6LdaRrGN7GQ525fvm",
+  "mints": {
+    "GOLD": "7Lj6UrAmpJj7UfzfXJGUr64bLcfoadha3xzhoyznZ5UY",
+    "FUEL": "DGTiAdvaMm4nk26RrAsXwFNm3HoQ2qJejM3eAWFJoRL7",
+    "LOG": "4G5jPqyYaPpyGaPsJvHpUCoPM54NqFamV9BpBgSjbbEi",
+    "MINERAL": "B8XVmhCuFyN9uJ7QE8pZx6nzUEuUPcPXqdJzAb3Qe2BD",
+    "FURNITURE": "FcLwqvt3xY6La2gnr48TY5JpYjTUFo4R5L7r5ab2d8xZ",
+    "FIRERUNE": "HpDvBrHoCGqVQE6NMocpr1C95g4AjonwB6jrkwtAZMBn",
+    "AMMO": "5GZzBoK8GC8FF7NisPYDP4hrB3smE5ru1o7Dg5F2idiP"
+  },
+  "collections": {
+    "ships": "61Rjxsxvd6E3PsyiXyoY6TUjhySeJoXT1LnXJ9BVPPq7",
+    "crew": "6EyLcSx4Nth8bUVrU66zduU2q54KcMtwgRB8DSkSBq8G"
+  }
+}

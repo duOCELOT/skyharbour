@@ -1,0 +1,911 @@
+[
+  {
+    "name": "First Pilgrim",
+    "class": "hauler",
+    "engine": 9,
+    "cargo": 36,
+    "bridge": 3,
+    "hull": 12,
+    "rarity": "common"
+  },
+  {
+    "name": "Hollow Lantern",
+    "class": "hauler",
+    "engine": 7,
+    "cargo": 32,
+    "bridge": 3,
+    "hull": 12,
+    "rarity": "common"
+  },
+  {
+    "name": "Long Mantle",
+    "class": "hauler",
+    "engine": 9,
+    "cargo": 35,
+    "bridge": 3,
+    "hull": 11,
+    "rarity": "common"
+  },
+  {
+    "name": "Rust Porter",
+    "class": "hauler",
+    "engine": 7,
+    "cargo": 34,
+    "bridge": 3,
+    "hull": 10,
+    "rarity": "common"
+  },
+  {
+    "name": "Void Runner",
+    "class": "hauler",
+    "engine": 6,
+    "cargo": 33,
+    "bridge": 3,
+    "hull": 12,
+    "rarity": "common"
+  },
+  {
+    "name": "True Badger",
+    "class": "hauler",
+    "engine": 6,
+    "cargo": 30,
+    "bridge": 3,
+    "hull": 10,
+    "rarity": "common"
+  },
+  {
+    "name": "Last Bastion",
+    "class": "hauler",
+    "engine": 7,
+    "cargo": 31,
+    "bridge": 3,
+    "hull": 10,
+    "rarity": "common"
+  },
+  {
+    "name": "Sky Mantle",
+    "class": "hauler",
+    "engine": 6,
+    "cargo": 36,
+    "bridge": 3,
+    "hull": 10,
+    "rarity": "common"
+  },
+  {
+    "name": "Rust Chariot",
+    "class": "hauler",
+    "engine": 9,
+    "cargo": 31,
+    "bridge": 3,
+    "hull": 10,
+    "rarity": "common"
+  },
+  {
+    "name": "Bright Comet",
+    "class": "hauler",
+    "engine": 8,
+    "cargo": 28,
+    "bridge": 3,
+    "hull": 10,
+    "rarity": "common"
+  },
+  {
+    "name": "Void Lantern",
+    "class": "hauler",
+    "engine": 7,
+    "cargo": 34,
+    "bridge": 3,
+    "hull": 11,
+    "rarity": "common"
+  },
+  {
+    "name": "Bruma Anchor",
+    "class": "hauler",
+    "engine": 8,
+    "cargo": 36,
+    "bridge": 3,
+    "hull": 10,
+    "rarity": "common"
+  },
+  {
+    "name": "Last Vagrant",
+    "class": "hauler",
+    "engine": 7,
+    "cargo": 37,
+    "bridge": 3,
+    "hull": 12,
+    "rarity": "common"
+  },
+  {
+    "name": "Gale Whale",
+    "class": "hauler",
+    "engine": 8,
+    "cargo": 29,
+    "bridge": 3,
+    "hull": 12,
+    "rarity": "common"
+  },
+  {
+    "name": "True Harrow",
+    "class": "hauler",
+    "engine": 8,
+    "cargo": 40,
+    "bridge": 3,
+    "hull": 10,
+    "rarity": "common"
+  },
+  {
+    "name": "Long Heron",
+    "class": "hauler",
+    "engine": 6,
+    "cargo": 39,
+    "bridge": 3,
+    "hull": 11,
+    "rarity": "common"
+  },
+  {
+    "name": "Void Otter",
+    "class": "hauler",
+    "engine": 7,
+    "cargo": 36,
+    "bridge": 3,
+    "hull": 11,
+    "rarity": "common"
+  },
+  {
+    "name": "Salt Furrow",
+    "class": "hauler",
+    "engine": 6,
+    "cargo": 32,
+    "bridge": 3,
+    "hull": 11,
+    "rarity": "common"
+  },
+  {
+    "name": "True Heron",
+    "class": "hauler",
+    "engine": 8,
+    "cargo": 28,
+    "bridge": 3,
+    "hull": 11,
+    "rarity": "common"
+  },
+  {
+    "name": "Drift Anchor",
+    "class": "hauler",
+    "engine": 6,
+    "cargo": 40,
+    "bridge": 3,
+    "hull": 10,
+    "rarity": "common"
+  },
+  {
+    "name": "Bold Gull",
+    "class": "hauler",
+    "engine": 6,
+    "cargo": 36,
+    "bridge": 3,
+    "hull": 10,
+    "rarity": "common"
+  },
+  {
+    "name": "Drift Bastion",
+    "class": "hauler",
+    "engine": 9,
+    "cargo": 37,
+    "bridge": 3,
+    "hull": 11,
+    "rarity": "common"
+  },
+  {
+    "name": "Drift Saddle",
+    "class": "hauler",
+    "engine": 6,
+    "cargo": 28,
+    "bridge": 3,
+    "hull": 11,
+    "rarity": "common"
+  },
+  {
+    "name": "Bright Saddle",
+    "class": "hauler",
+    "engine": 7,
+    "cargo": 34,
+    "bridge": 3,
+    "hull": 12,
+    "rarity": "common"
+  },
+  {
+    "name": "Ember Porter",
+    "class": "hauler",
+    "engine": 7,
+    "cargo": 38,
+    "bridge": 3,
+    "hull": 11,
+    "rarity": "common"
+  },
+  {
+    "name": "Bold Chariot",
+    "class": "hauler",
+    "engine": 6,
+    "cargo": 38,
+    "bridge": 3,
+    "hull": 10,
+    "rarity": "common"
+  },
+  {
+    "name": "Sky Anchor",
+    "class": "hauler",
+    "engine": 6,
+    "cargo": 34,
+    "bridge": 3,
+    "hull": 12,
+    "rarity": "common"
+  },
+  {
+    "name": "Rust Bastion",
+    "class": "hauler",
+    "engine": 6,
+    "cargo": 32,
+    "bridge": 3,
+    "hull": 12,
+    "rarity": "common"
+  },
+  {
+    "name": "Cinder Whale",
+    "class": "hauler",
+    "engine": 8,
+    "cargo": 37,
+    "bridge": 3,
+    "hull": 12,
+    "rarity": "common"
+  },
+  {
+    "name": "Wander Saddle",
+    "class": "hauler",
+    "engine": 6,
+    "cargo": 35,
+    "bridge": 3,
+    "hull": 10,
+    "rarity": "common"
+  },
+  {
+    "name": "Rust Saddle",
+    "class": "hauler",
+    "engine": 6,
+    "cargo": 40,
+    "bridge": 3,
+    "hull": 12,
+    "rarity": "common"
+  },
+  {
+    "name": "Void Chariot",
+    "class": "hauler",
+    "engine": 8,
+    "cargo": 28,
+    "bridge": 3,
+    "hull": 11,
+    "rarity": "common"
+  },
+  {
+    "name": "Void Mantle",
+    "class": "hauler",
+    "engine": 9,
+    "cargo": 31,
+    "bridge": 3,
+    "hull": 10,
+    "rarity": "common"
+  },
+  {
+    "name": "Dun Gull",
+    "class": "hauler",
+    "engine": 8,
+    "cargo": 38,
+    "bridge": 3,
+    "hull": 11,
+    "rarity": "common"
+  },
+  {
+    "name": "Dun Otter",
+    "class": "hauler",
+    "engine": 6,
+    "cargo": 29,
+    "bridge": 3,
+    "hull": 12,
+    "rarity": "common"
+  },
+  {
+    "name": "Hollow Vagrant",
+    "class": "hauler",
+    "engine": 7,
+    "cargo": 31,
+    "bridge": 3,
+    "hull": 12,
+    "rarity": "common"
+  },
+  {
+    "name": "Wander Mantle",
+    "class": "hauler",
+    "engine": 9,
+    "cargo": 40,
+    "bridge": 3,
+    "hull": 11,
+    "rarity": "common"
+  },
+  {
+    "name": "Sky Saddle",
+    "class": "hauler",
+    "engine": 8,
+    "cargo": 32,
+    "bridge": 3,
+    "hull": 10,
+    "rarity": "common"
+  },
+  {
+    "name": "Cinder Sparrow",
+    "class": "hauler",
+    "engine": 9,
+    "cargo": 38,
+    "bridge": 3,
+    "hull": 12,
+    "rarity": "common"
+  },
+  {
+    "name": "Ash Tide",
+    "class": "hauler",
+    "engine": 9,
+    "cargo": 31,
+    "bridge": 3,
+    "hull": 12,
+    "rarity": "common"
+  },
+  {
+    "name": "Cinder Furrow",
+    "class": "hauler",
+    "engine": 9,
+    "cargo": 32,
+    "bridge": 3,
+    "hull": 11,
+    "rarity": "common"
+  },
+  {
+    "name": "Rust Mantle",
+    "class": "hauler",
+    "engine": 8,
+    "cargo": 35,
+    "bridge": 3,
+    "hull": 10,
+    "rarity": "common"
+  },
+  {
+    "name": "Storm Lantern",
+    "class": "hauler",
+    "engine": 7,
+    "cargo": 37,
+    "bridge": 3,
+    "hull": 12,
+    "rarity": "common"
+  },
+  {
+    "name": "Grey Porter",
+    "class": "hauler",
+    "engine": 7,
+    "cargo": 30,
+    "bridge": 3,
+    "hull": 11,
+    "rarity": "common"
+  },
+  {
+    "name": "Cinder Bastion",
+    "class": "hauler",
+    "engine": 9,
+    "cargo": 37,
+    "bridge": 3,
+    "hull": 11,
+    "rarity": "common"
+  },
+  {
+    "name": "Bold Saddle",
+    "class": "freighter",
+    "engine": 10,
+    "cargo": 23,
+    "bridge": 2,
+    "hull": 9,
+    "rarity": "uncommon"
+  },
+  {
+    "name": "Copper Crane",
+    "class": "freighter",
+    "engine": 10,
+    "cargo": 23,
+    "bridge": 2,
+    "hull": 8,
+    "rarity": "uncommon"
+  },
+  {
+    "name": "Drift Comet",
+    "class": "freighter",
+    "engine": 12,
+    "cargo": 21,
+    "bridge": 2,
+    "hull": 8,
+    "rarity": "uncommon"
+  },
+  {
+    "name": "Ash Porter",
+    "class": "freighter",
+    "engine": 12,
+    "cargo": 18,
+    "bridge": 2,
+    "hull": 9,
+    "rarity": "uncommon"
+  },
+  {
+    "name": "Bruma Wren",
+    "class": "freighter",
+    "engine": 13,
+    "cargo": 24,
+    "bridge": 2,
+    "hull": 9,
+    "rarity": "uncommon"
+  },
+  {
+    "name": "Bold Runner",
+    "class": "freighter",
+    "engine": 13,
+    "cargo": 16,
+    "bridge": 2,
+    "hull": 8,
+    "rarity": "uncommon"
+  },
+  {
+    "name": "Bright Sparrow",
+    "class": "freighter",
+    "engine": 11,
+    "cargo": 23,
+    "bridge": 2,
+    "hull": 9,
+    "rarity": "uncommon"
+  },
+  {
+    "name": "Last Badger",
+    "class": "freighter",
+    "engine": 13,
+    "cargo": 22,
+    "bridge": 2,
+    "hull": 9,
+    "rarity": "uncommon"
+  },
+  {
+    "name": "Ember Anchor",
+    "class": "freighter",
+    "engine": 12,
+    "cargo": 24,
+    "bridge": 2,
+    "hull": 8,
+    "rarity": "uncommon"
+  },
+  {
+    "name": "Copper Pilgrim",
+    "class": "freighter",
+    "engine": 10,
+    "cargo": 23,
+    "bridge": 2,
+    "hull": 8,
+    "rarity": "uncommon"
+  },
+  {
+    "name": "Salt Tide",
+    "class": "freighter",
+    "engine": 10,
+    "cargo": 19,
+    "bridge": 2,
+    "hull": 9,
+    "rarity": "uncommon"
+  },
+  {
+    "name": "Iron Whale",
+    "class": "freighter",
+    "engine": 13,
+    "cargo": 18,
+    "bridge": 2,
+    "hull": 9,
+    "rarity": "uncommon"
+  },
+  {
+    "name": "Sky Pilgrim",
+    "class": "freighter",
+    "engine": 12,
+    "cargo": 22,
+    "bridge": 2,
+    "hull": 9,
+    "rarity": "uncommon"
+  },
+  {
+    "name": "Gale Lantern",
+    "class": "freighter",
+    "engine": 12,
+    "cargo": 24,
+    "bridge": 2,
+    "hull": 9,
+    "rarity": "uncommon"
+  },
+  {
+    "name": "Dun Badger",
+    "class": "freighter",
+    "engine": 10,
+    "cargo": 16,
+    "bridge": 2,
+    "hull": 8,
+    "rarity": "uncommon"
+  },
+  {
+    "name": "Dun Runner",
+    "class": "freighter",
+    "engine": 11,
+    "cargo": 16,
+    "bridge": 2,
+    "hull": 8,
+    "rarity": "uncommon"
+  },
+  {
+    "name": "Gale Porter",
+    "class": "freighter",
+    "engine": 13,
+    "cargo": 22,
+    "bridge": 2,
+    "hull": 9,
+    "rarity": "uncommon"
+  },
+  {
+    "name": "Bold Heron",
+    "class": "freighter",
+    "engine": 11,
+    "cargo": 24,
+    "bridge": 2,
+    "hull": 8,
+    "rarity": "uncommon"
+  },
+  {
+    "name": "Storm Otter",
+    "class": "freighter",
+    "engine": 11,
+    "cargo": 20,
+    "bridge": 2,
+    "hull": 9,
+    "rarity": "uncommon"
+  },
+  {
+    "name": "Ash Mantle",
+    "class": "freighter",
+    "engine": 11,
+    "cargo": 18,
+    "bridge": 2,
+    "hull": 8,
+    "rarity": "uncommon"
+  },
+  {
+    "name": "Rust Runner",
+    "class": "freighter",
+    "engine": 12,
+    "cargo": 19,
+    "bridge": 2,
+    "hull": 9,
+    "rarity": "uncommon"
+  },
+  {
+    "name": "Void Mule",
+    "class": "freighter",
+    "engine": 13,
+    "cargo": 21,
+    "bridge": 2,
+    "hull": 9,
+    "rarity": "uncommon"
+  },
+  {
+    "name": "True Wren",
+    "class": "freighter",
+    "engine": 13,
+    "cargo": 21,
+    "bridge": 2,
+    "hull": 8,
+    "rarity": "uncommon"
+  },
+  {
+    "name": "Wander Mule",
+    "class": "freighter",
+    "engine": 11,
+    "cargo": 17,
+    "bridge": 2,
+    "hull": 9,
+    "rarity": "uncommon"
+  },
+  {
+    "name": "Bruma Sparrow",
+    "class": "freighter",
+    "engine": 12,
+    "cargo": 19,
+    "bridge": 2,
+    "hull": 9,
+    "rarity": "uncommon"
+  },
+  {
+    "name": "Hollow Saddle",
+    "class": "freighter",
+    "engine": 13,
+    "cargo": 19,
+    "bridge": 2,
+    "hull": 8,
+    "rarity": "uncommon"
+  },
+  {
+    "name": "Ash Wager",
+    "class": "freighter",
+    "engine": 12,
+    "cargo": 24,
+    "bridge": 2,
+    "hull": 8,
+    "rarity": "uncommon"
+  },
+  {
+    "name": "Bold Wren",
+    "class": "freighter",
+    "engine": 10,
+    "cargo": 22,
+    "bridge": 2,
+    "hull": 9,
+    "rarity": "uncommon"
+  },
+  {
+    "name": "Hollow Mule",
+    "class": "freighter",
+    "engine": 11,
+    "cargo": 18,
+    "bridge": 2,
+    "hull": 9,
+    "rarity": "uncommon"
+  },
+  {
+    "name": "Last Tide",
+    "class": "freighter",
+    "engine": 12,
+    "cargo": 17,
+    "bridge": 2,
+    "hull": 9,
+    "rarity": "uncommon"
+  },
+  {
+    "name": "Copper Vagrant",
+    "class": "courier",
+    "engine": 18,
+    "cargo": 8,
+    "bridge": 1,
+    "hull": 6,
+    "rarity": "rare"
+  },
+  {
+    "name": "Grey Furrow",
+    "class": "courier",
+    "engine": 16,
+    "cargo": 9,
+    "bridge": 1,
+    "hull": 5,
+    "rarity": "rare"
+  },
+  {
+    "name": "Keel Wager",
+    "class": "courier",
+    "engine": 19,
+    "cargo": 10,
+    "bridge": 1,
+    "hull": 5,
+    "rarity": "rare"
+  },
+  {
+    "name": "Bright Heron",
+    "class": "courier",
+    "engine": 16,
+    "cargo": 10,
+    "bridge": 1,
+    "hull": 5,
+    "rarity": "rare"
+  },
+  {
+    "name": "Last Whale",
+    "class": "courier",
+    "engine": 18,
+    "cargo": 9,
+    "bridge": 1,
+    "hull": 6,
+    "rarity": "rare"
+  },
+  {
+    "name": "Copper Gull",
+    "class": "courier",
+    "engine": 19,
+    "cargo": 7,
+    "bridge": 1,
+    "hull": 6,
+    "rarity": "rare"
+  },
+  {
+    "name": "True Saddle",
+    "class": "courier",
+    "engine": 17,
+    "cargo": 7,
+    "bridge": 1,
+    "hull": 6,
+    "rarity": "rare"
+  },
+  {
+    "name": "Keel Lantern",
+    "class": "courier",
+    "engine": 17,
+    "cargo": 7,
+    "bridge": 1,
+    "hull": 6,
+    "rarity": "rare"
+  },
+  {
+    "name": "Last Runner",
+    "class": "courier",
+    "engine": 17,
+    "cargo": 8,
+    "bridge": 1,
+    "hull": 5,
+    "rarity": "rare"
+  },
+  {
+    "name": "Salt Comet",
+    "class": "courier",
+    "engine": 19,
+    "cargo": 9,
+    "bridge": 1,
+    "hull": 6,
+    "rarity": "rare"
+  },
+  {
+    "name": "Hollow Wren",
+    "class": "courier",
+    "engine": 16,
+    "cargo": 8,
+    "bridge": 1,
+    "hull": 6,
+    "rarity": "rare"
+  },
+  {
+    "name": "Sky Gull",
+    "class": "courier",
+    "engine": 20,
+    "cargo": 6,
+    "bridge": 1,
+    "hull": 5,
+    "rarity": "rare"
+  },
+  {
+    "name": "Keel Mantle",
+    "class": "courier",
+    "engine": 17,
+    "cargo": 9,
+    "bridge": 1,
+    "hull": 5,
+    "rarity": "rare"
+  },
+  {
+    "name": "Bold Anchor",
+    "class": "courier",
+    "engine": 20,
+    "cargo": 6,
+    "bridge": 1,
+    "hull": 5,
+    "rarity": "rare"
+  },
+  {
+    "name": "Ember Crane",
+    "class": "courier",
+    "engine": 16,
+    "cargo": 8,
+    "bridge": 1,
+    "hull": 6,
+    "rarity": "rare"
+  },
+  {
+    "name": "Bold Otter",
+    "class": "courier",
+    "engine": 18,
+    "cargo": 6,
+    "bridge": 1,
+    "hull": 5,
+    "rarity": "rare"
+  },
+  {
+    "name": "Ash Heron",
+    "class": "courier",
+    "engine": 18,
+    "cargo": 8,
+    "bridge": 1,
+    "hull": 5,
+    "rarity": "rare"
+  },
+  {
+    "name": "Ember Wren",
+    "class": "courier",
+    "engine": 16,
+    "cargo": 7,
+    "bridge": 1,
+    "hull": 6,
+    "rarity": "rare"
+  },
+  {
+    "name": "Copper Whale",
+    "class": "courier",
+    "engine": 16,
+    "cargo": 10,
+    "bridge": 1,
+    "hull": 5,
+    "rarity": "rare"
+  },
+  {
+    "name": "First Wren",
+    "class": "courier",
+    "engine": 17,
+    "cargo": 9,
+    "bridge": 1,
+    "hull": 6,
+    "rarity": "rare"
+  },
+  {
+    "name": "Long Anchor",
+    "class": "relic",
+    "engine": 16,
+    "cargo": 26,
+    "bridge": 3,
+    "hull": 9,
+    "rarity": "relic"
+  },
+  {
+    "name": "Ember Wager",
+    "class": "relic",
+    "engine": 15,
+    "cargo": 28,
+    "bridge": 3,
+    "hull": 9,
+    "rarity": "relic"
+  },
+  {
+    "name": "Drift Mantle",
+    "class": "relic",
+    "engine": 15,
+    "cargo": 26,
+    "bridge": 3,
+    "hull": 10,
+    "rarity": "relic"
+  },
+  {
+    "name": "Dun Comet",
+    "class": "relic",
+    "engine": 16,
+    "cargo": 30,
+    "bridge": 3,
+    "hull": 9,
+    "rarity": "relic"
+  },
+  {
+    "name": "Copper Chariot",
+    "class": "relic",
+    "engine": 16,
+    "cargo": 28,
+    "bridge": 3,
+    "hull": 10,
+    "rarity": "relic"
+  },
+  {
+    "name": "Void Sovereign",
+    "class": "flagship",
+    "engine": 20,
+    "cargo": 40,
+    "bridge": 4,
+    "hull": 14,
+    "rarity": "flagship"
+  }
+]

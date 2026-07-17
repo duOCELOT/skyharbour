@@ -1,0 +1,61 @@
+{
+  "J9odt2jrH9PhxzA6SUMcztNPse3kuD6g1CCJkuEhVGCY": {
+    "type": "ship",
+    "id": "SH-001 First Pilgrim",
+    "engine": 9,
+    "cargo": 36,
+    "crewSlots": 3,
+    "hull": 12
+  },
+  "7onxUyCM67cebnQU2WW3PGdUpx1BkfFKfEkjZ35ETGqd": {
+    "type": "ship",
+    "id": "SH-002 Copper Vagrant",
+    "engine": 18,
+    "cargo": 8,
+    "crewSlots": 1,
+    "hull": 6
+  },
+  "5Zwfxz2zBmT3HfRvVNFk5Y6BKK1vDfggzcG316Whr39S": {
+    "type": "ship",
+    "id": "SH-003 Bold Saddle",
+    "engine": 10,
+    "cargo": 23,
+    "crewSlots": 2,
+    "hull": 9
+  },
+  "BYLUkrWpLV4dwpsBb5NK8n8gkyTfnxWErt1dkhe3wcZS": {
+    "type": "crew",
+    "id": "CR-001 Sable Ferro",
+    "skills": {
+      "fuel": 16
+    }
+  },
+  "9ReuVvWyXSQpheTSuiXWPKvnjxEjjpWpqMKxYJjXJBwD": {
+    "type": "crew",
+    "id": "CR-002 Beren Sedge",
+    "skills": {
+      "fuel": 18
+    }
+  },
+  "Hibdt6GG37ehLkmwrQCbkBr6bX4XBt4mZu9hLYCTAvEX": {
+    "type": "crew",
+    "id": "CR-003 Rurik Petrov",
+    "skills": {
+      "defense": 15
+    }
+  },
+  "GUqHBCBbojUjMAtj3eikuMBeqPRtA9EmkbsBLGVhx8RA": {
+    "type": "crew",
+    "id": "CR-004 Nyla Lindqvist",
+    "skills": {
+      "attack": 18
+    }
+  },
+  "BfU424tM9dvxvGmsYb4V5ta7YXVAPbVfpvu9WnPvEZz3": {
+    "type": "crew",
+    "id": "CR-005 Wren Osei",
+    "skills": {
+      "hauling": 18
+    }
+  }
+}
