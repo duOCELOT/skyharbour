@@ -2,12 +2,7 @@ import os from 'node:os';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-export const RESERVED = ['harbour', 'settlement', 'mint', 'burn', 'chain'];
-
-export function isReservedWallet(name: string): boolean {
-  const n = name.toLowerCase();
-  return RESERVED.includes(n) || n.startsWith('escrow:');
-}
+export { RESERVED, isReservedWallet } from './reserved.js';
 
 export interface ChainConfig {
   enabled: boolean;

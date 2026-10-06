@@ -5,6 +5,12 @@
 [Sky Harbour dAPP](https://duocelot.github.io/skyharbour/
 ) ( under development )
 
+## Play
+
+- **Demo (no install):** open the [Sky Harbour dAPP](https://duocelot.github.io/skyharbour/) and press CONNECT WALLET. With no game server behind the page it runs the *demo harbour* — the real server rules running in your browser, progress saved in that browser. Wallet claims and SOL purchases need the live server.
+- **Live server:** `cd server && npm install && npm run dev`, then open http://localhost:8420/app/.
+- **After changing server game code**, rebuild the demo so the public page plays the same rules: `cd server && npm run build:demo` (commit the updated `client/demo/`).
+
 ## Overview
 
 "Within a vortex of the void, a flying archipelago emerges between realities. These islands, suspended in vastness, conceal a secret: the Firerune. This pulsating and enigmatic material harbors hidden properties yet to be unveiled.

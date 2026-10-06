@@ -183,12 +183,13 @@ async function refreshCrew() {
 async function completeLogin() {
   try {
     session = await login();
-    say(`DOCKED: ${pilotName().toUpperCase()}${session.granted ? ' — STARTER GRANT ISSUED' : ''}`);
+    say(`DOCKED: ${pilotName().toUpperCase()}${session.demo ? ' · DEMO' : ''}${session.granted ? ' — STARTER GRANT ISSUED' : ''}`);
     selectedShipId = session.ships[0]?.id ?? null;
     selectedMissionId = null;
     refreshShipView();
     crt.comm('HARBOURMASTER', `Welcome to the bridge, ${pilotName()}.`);
     if (session.granted) crt.comm('QUARTERMASTER', 'Starter grant issued — fuel, shells, and coin aboard.');
+    if (session.demo) crt.comm('HARBOURMASTER', 'Demo harbour — your progress is saved in this browser. Wallet claims open on the live server.');
     const first = session.ships.find((s) => s.id === selectedShipId);
     if (first) crt.showImage(shipImage(first));
     $('ghosts-mount').innerHTML = renderGhostRuns(await missionsMine());
@@ -235,7 +236,7 @@ $('account').addEventListener('click', () => {
   if (cs === null) return;
   const v = cs.trim();
   if (v) localStorage.setItem(CALLSIGN_KEY, v); else localStorage.removeItem(CALLSIGN_KEY);
-  say(`DOCKED: ${pilotName().toUpperCase()}`);
+  say(`DOCKED: ${pilotName().toUpperCase()}${session.demo ? " · DEMO" : ""}`);
 });
 
 $('sign-in-button').addEventListener('click', doLogin);

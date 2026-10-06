@@ -13,15 +13,48 @@ export function getSession() { return localStorage.getItem(SESSION_KEY); }
 export function setSession(token) { localStorage.setItem(SESSION_KEY, token); }
 export function clearSession() { localStorage.removeItem(SESSION_KEY); }
 
+// Offline demo: on a static host (GitHub Pages) there is no game server, so
+// the first request that finds none — a network error, or a non-JSON reply
+// like a host's HTML 404 page — switches every call to the in-browser demo
+// harbour (client/demo/demo.js, the same server modules on wasm SQLite).
+// A real server always answers JSON, so local dev and deploys are untouched.
+let demo = null; // null = undecided, false = live server, else the demo module
+export const isDemo = () => !!demo;
+
+async function demoCall(path, method, body) {
+  const res = demo.request({ method, path, wallet: getWallet(), body });
+  if (res.status >= 400) throw new Error(res.body?.error ?? `request failed: ${path}`);
+  return res.body;
+}
+
+async function enterDemo() {
+  demo = await import('./demo/demo.js');
+  console.info('[skyharbour] no game server found — running the offline demo harbour');
+}
+
 export async function api(path, { method = 'GET', body } = {}) {
-  const res = await fetch(path, {
-    method,
-    headers: {
-      ...(getSession() ? { 'x-session': getSession() } : { 'x-wallet': getWallet() ?? '' }),
-      ...(body !== undefined ? { 'content-type': 'application/json' } : {}),
-    },
-    ...(body !== undefined ? { body: JSON.stringify(body) } : {}),
-  });
+  if (demo) return demoCall(path, method, body);
+  let res;
+  try {
+    res = await fetch(path, {
+      method,
+      headers: {
+        ...(getSession() ? { 'x-session': getSession() } : { 'x-wallet': getWallet() ?? '' }),
+        ...(body !== undefined ? { 'content-type': 'application/json' } : {}),
+      },
+      ...(body !== undefined ? { body: JSON.stringify(body) } : {}),
+    });
+  } catch (e) {
+    if (demo !== null) throw e; // a live server that dropped out — surface it
+    await enterDemo();
+    return demoCall(path, method, body);
+  }
+  const type = res.headers?.get?.('content-type');
+  if (demo === null && typeof type === 'string' && !type.includes('json')) {
+    await enterDemo();
+    return demoCall(path, method, body);
+  }
+  if (demo === null) demo = false;
   if (!res.ok) {
     let message = `request failed: ${path}`;
     try {
